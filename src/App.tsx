@@ -1,22 +1,37 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
 import LicenseDetails from './components/LicenseDetails';
 
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#90caf9',
+    },
+    background: {
+      default: '#303030',
+      paper: '#424242',
+    },
+  },
+});
+
 const App: React.FC = () => {
   return (
-    <Router>
+    <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/license/:id" element={<LicenseDetails />} />
-      </Routes>
-    </Router>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/license/:id" element={<LicenseDetails />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 

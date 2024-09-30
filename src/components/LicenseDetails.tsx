@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Typography, Card, CardContent, CardMedia } from '@mui/material';
+import { Typography, Card, CardContent, CardMedia, List, ListItem, ListItemText, Link } from '@mui/material';
 import licenses from '../data/licenses.json';
 import { License } from '../types';
 
@@ -23,26 +23,55 @@ const LicenseDetails: React.FC = () => {
         />
       )}
       <CardContent>
-        <Typography variant="h5" component="div">
+        <Typography variant="h5" component="div" gutterBottom>
           {license.name}
         </Typography>
-        <Typography variant="body2" color="textSecondary">
+        <Typography variant="body1" paragraph>
           {license.description}
         </Typography>
-        {license.popularProjects && license.popularProjects.length > 0 && (
+        {license.attributes && (
           <>
-            <Typography variant="h6">Popular Projects:</Typography>
-            <ul>
-              {license.popularProjects.map((project) => (
-                <li key={project.name}>{project.name}</li>
+            <Typography variant="h6" gutterBottom>Attributes:</Typography>
+            <List>
+              {Object.entries(license.attributes).map(([key, value]) => (
+                <ListItem key={key}>
+                  <ListItemText primary={`${key}: ${value ? 'Yes' : 'No'}`} />
+                </ListItem>
               ))}
-            </ul>
+            </List>
           </>
         )}
-        <Typography variant="h6">License Text:</Typography>
-        <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+        {license.popularProjects && license.popularProjects.length > 0 && (
+          <>
+            <Typography variant="h6" gutterBottom>Popular Projects:</Typography>
+            <List>
+              {license.popularProjects.map((project) => (
+                <ListItem key={project.name}>
+                  <ListItemText primary={project.name} />
+                </ListItem>
+              ))}
+            </List>
+          </>
+        )}
+        {license.details && (
+          <>
+            <Typography variant="h6" gutterBottom>Details:</Typography>
+            <Typography variant="body2" paragraph>
+              {license.details}
+            </Typography>
+          </>
+        )}
+        {license.officialUrl && (
+          <Typography variant="body2" paragraph>
+            Official Website: <Link href={license.officialUrl} target="_blank" rel="noopener noreferrer">
+              {license.officialUrl}
+            </Link>
+          </Typography>
+        )}
+        <Typography variant="h6" gutterBottom>Full License Text:</Typography>
+        <Typography variant="body2" component="pre" style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
           {license.fullText}
-        </pre>
+        </Typography>
       </CardContent>
     </Card>
   );

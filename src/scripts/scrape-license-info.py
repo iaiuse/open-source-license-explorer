@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import json
 import time
 import os
+import html2text
 
 # Function to read existing license data from file
 def read_existing_licenses(file_path):
@@ -34,6 +35,13 @@ def try_different_urls(license):
         attempts.append(license['url'])
 
     return attempts
+
+# Function to convert HTML content to Markdown
+def convert_html_to_markdown(html_content):
+    markdown_converter = html2text.HTML2Text()
+    markdown_converter.ignore_links = False  # Keep links in the Markdown
+    markdown_content = markdown_converter.handle(html_content)
+    return markdown_content
 
 # Function to scrape license info from Wikipedia
 def scrape_license_info(licenses, file_path):
@@ -71,13 +79,17 @@ def scrape_license_info(licenses, file_path):
                     official_url_tag = soup.select_one('.infobox-data a[rel="nofollow"]')
                     official_url = official_url_tag['href'] if official_url_tag else None
 
-                    # Fetch the full text of the license if official URL is found
+                    # Fetch and convert the full text of the license if official URL is found
                     full_text = ""
                     if official_url:
                         try:
                             full_text_response = requests.get(official_url)
                             full_text_response.raise_for_status()
-                            full_text = full_text_response.text
+                            full_text_html = full_text_response.text
+
+                            # Convert the fetched HTML full text to Markdown
+                            full_text = convert_html_to_markdown(full_text_html)
+
                         except Exception as e:
                             print(f"Error fetching full text for {license['name']}: {e}")
 
@@ -114,7 +126,7 @@ def scrape_license_info(licenses, file_path):
     print("\nScraping completed!")
     print(f"Successfully scraped the following licenses: {successful_licenses}")
     print(f"Failed to scrape the following licenses: {failed_licenses}")
-
+    
 # License data structure
 licenses = [
     {"name": "Academic Free License v3.0", "keyword": "AFL-3.0", "url": ""},
