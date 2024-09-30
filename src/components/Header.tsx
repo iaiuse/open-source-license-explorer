@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
@@ -9,12 +9,12 @@ const Header: React.FC = () => {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           开源许可证探索器
         </Typography>
-        <Button color="inherit" component={RouterLink} to="/">
-          首页
-        </Button>
-        <Button color="inherit" component={RouterLink} to="/about">
-          关于
-        </Button>
+        <Link href="/" passHref>
+          <Button color="inherit" component="a">首页</Button>
+        </Link>
+        <Link href="/about" passHref>
+          <Button color="inherit" component="a">关于</Button>
+        </Link>
       </Toolbar>
     </AppBar>
   );
