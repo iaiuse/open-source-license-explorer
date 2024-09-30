@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { CssBaseline } from '@mui/material';
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -11,11 +11,11 @@ const App: React.FC = () => {
     <Router>
       <CssBaseline />
       <Header />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/license/:id" component={LicenseDetails} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/license/:id" element={<LicenseDetails />} />
+      </Routes>
     </Router>
   );
 }
