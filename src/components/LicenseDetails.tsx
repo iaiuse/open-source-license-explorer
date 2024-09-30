@@ -14,12 +14,14 @@ const LicenseDetails: React.FC = () => {
 
   return (
     <Card>
-      <CardMedia
-        component="img"
-        height="140"
-        image={license.logo}
-        alt={`${license.name} logo`}
-      />
+      {license.logo && (
+        <CardMedia
+          component="img"
+          height="140"
+          image={license.logo}
+          alt={`${license.name} logo`}
+        />
+      )}
       <CardContent>
         <Typography variant="h5" component="div">
           {license.name}
@@ -27,15 +29,19 @@ const LicenseDetails: React.FC = () => {
         <Typography variant="body2" color="textSecondary">
           {license.description}
         </Typography>
-        <Typography variant="h6">Popular Projects:</Typography>
-        <ul>
-          {license.popularProjects.map((project) => (
-            <li key={project.name}>{project.name}</li>
-          ))}
-        </ul>
+        {license.popularProjects && license.popularProjects.length > 0 && (
+          <>
+            <Typography variant="h6">Popular Projects:</Typography>
+            <ul>
+              {license.popularProjects.map((project) => (
+                <li key={project.name}>{project.name}</li>
+              ))}
+            </ul>
+          </>
+        )}
         <Typography variant="h6">License Text:</Typography>
         <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
-          {license.details}
+          {license.fullText}
         </pre>
       </CardContent>
     </Card>

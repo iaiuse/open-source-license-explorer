@@ -7,4 +7,5 @@ export interface License {
   details?: string; // Optional
   attributes?: { [key: string]: boolean }; // Optional
   officialWebsite?: string | null; // Optional or nullable
+  fullText: string;
 }
