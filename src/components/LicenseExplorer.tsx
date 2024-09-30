@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { 
-  Grid, 
+  Box,
   Card, 
   CardContent, 
   CardHeader, 
   Typography, 
   Button, 
-  TextField, 
-  Link
+  TextField
 } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import Link from 'next/link';
 import licenses from '../data/licenses.json';
 import { License } from '../types';
 
@@ -30,7 +29,7 @@ const LicenseExplorer: React.FC = () => {
   );
 
   return (
-    <div>
+    <Box>
       <TextField
         fullWidth
         variant="outlined"
@@ -40,14 +39,16 @@ const LicenseExplorer: React.FC = () => {
         sx={{ mb: 4 }}
       />
 
-      <Grid container spacing={3}>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
         {filteredLicenses.map((license: License) => (
-          <Grid item xs={12} sm={6} md={4} key={license.keyword}>
+          <Box key={license.keyword} sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)', md: 'calc(33.333% - 16px)' } }}>
             <Card>
               <CardHeader 
                 title={
-                  <Link component={RouterLink} to={`/license/${license.keyword}`}>
-                    {license.name}
+                  <Link href={`/license/${license.keyword}`} passHref>
+                    <Typography component="a" variant="h6" color="primary" sx={{ textDecoration: 'none' }}>
+                      {license.name}
+                    </Typography>
                   </Link>
                 } 
               />
@@ -70,16 +71,16 @@ const LicenseExplorer: React.FC = () => {
                 </Button>
               </CardContent>
             </Card>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
 
       {selectedLicenses.length > 0 && (
         <Typography variant="h6" sx={{ mt: 4 }}>
           Selected Licenses: {selectedLicenses.map(l => l.name).join(', ')}
         </Typography>
       )}
-    </div>
+    </Box>
   );
 };
 
