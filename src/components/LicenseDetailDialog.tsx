@@ -56,13 +56,13 @@ const LicenseDetailDialog: React.FC<LicenseDetailDialogProps> = ({ license, open
         dividers
         sx={{
           position: 'relative',
-          // 背景图像作为底色
+          // 将徽标放置在左上角，不拉伸
           backgroundImage: `url(${license.logo})`,
-          backgroundSize: 'contain', // 调整背景图的大小，可以根据需要选择 'cover' 或 'contain'
-          backgroundPosition: 'center',
+          backgroundSize: 'auto', // 不拉伸，保持原始尺寸
+          backgroundPosition: 'top left', // 放置在左上角
           backgroundRepeat: 'no-repeat',
-          opacity: 0.8, // 控制背景透明度，以减少干扰
-          zIndex: 1 // 保持背景在底层
+          opacity: 0.05, // 设置较低的透明度，以确保内容不会被遮盖
+          zIndex: 1 // 保证背景在底层
         }}
       >
         <Box
