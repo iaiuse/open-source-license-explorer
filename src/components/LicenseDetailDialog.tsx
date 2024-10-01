@@ -87,9 +87,19 @@ const LicenseDetailDialog: React.FC<LicenseDetailDialogProps> = ({ license, open
                       <Typography variant="body2">{compatibilityLabels[key as keyof typeof compatibilityLabels]}</Typography>
                     </TableCell>
                     <TableCell align="right">
-                      <Typography variant="body2" sx={{ color: compatibilityColors[key as keyof typeof compatibilityColors] }}>
-                        {value}/5
-                      </Typography>
+                      {/* 用进度条展示评分 */}
+                      <LinearProgress
+                        variant="determinate"
+                        value={value * 20}  // 进度条的值从0到100，所以将5分制乘以20
+                        sx={{ 
+                          height: 8, 
+                          borderRadius: 5,
+                          backgroundColor: '#e0e0e0',
+                          '& .MuiLinearProgress-bar': {
+                            backgroundColor: compatibilityColors[key as keyof typeof compatibilityColors]
+                          }
+                        }}
+                      />
                     </TableCell>
                   </TableRow>
                 ))}
