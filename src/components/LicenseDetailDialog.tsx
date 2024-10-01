@@ -11,7 +11,11 @@ import {
   Grid,
   LinearProgress,
   Tooltip,
-  Divider
+  Divider,
+  Table,
+  TableBody,
+  TableCell,
+  TableRow
 } from '@mui/material';
 import ReactMarkdown from 'react-markdown';
 import { License } from '../types';
@@ -45,66 +49,61 @@ const LicenseDetailDialog: React.FC<LicenseDetailDialogProps> = ({ license, open
     return null;
   }
 
+  // 提取 summary 中第一个句号前的内容
+  const extractSummaryIntro = (text: string) => {
+    const periodIndex = text.indexOf('。');
+    return periodIndex > 0 ? text.substring(0, periodIndex + 1) : text;
+  };
+
   return (
     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
       <DialogTitle>
-        <Typography variant="h6">
-          {license.name}
-        </Typography>
+        <Box display="flex" justifyContent="space-between" alignItems="center">
+          {/* 左侧图标和标题 */}
+          <Box display="flex" alignItems="center">
+            {license.logo && (
+              <Box sx={{ width: 60, height: 60, marginRight: 2 }}>
+                <img src={license.logo} alt={`${license.name} logo`} width="100%" height="100%" />
+              </Box>
+            )}
+            <Box>
+              <Typography variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
+                {license.name}
+              </Typography>
+              {/* 提取 summary 的第一句 */}
+              <Typography variant="body2" color="textSecondary">
+                {extractSummaryIntro(license.summary || license.spdx_description)}
+              </Typography>
+            </Box>
+          </Box>
+
+          {/* 右侧兼容性指标表格 */}
+          <Box>
+            <Table size="small" sx={{ minWidth: 200 }}>
+              <TableBody>
+                {Object.entries(license.compatibility).map(([key, value], index) => (
+                  <TableRow key={index}>
+                    <TableCell>
+                      <Typography variant="body2">{compatibilityLabels[key as keyof typeof compatibilityLabels]}</Typography>
+                    </TableCell>
+                    <TableCell align="right">
+                      <Typography variant="body2" sx={{ color: compatibilityColors[key as keyof typeof compatibilityColors] }}>
+                        {value}/5
+                      </Typography>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </Box>
+        </Box>
       </DialogTitle>
-      <DialogContent 
-        dividers
-        sx={{
-          position: 'relative',
-          // 将徽标放置在左上角，不拉伸
-          backgroundImage: `url(${license.logo})`,
-          backgroundSize: 'auto', // 不拉伸，保持原始尺寸
-          backgroundPosition: 'top left', // 放置在左上角
-          backgroundRepeat: 'no-repeat',
-          opacity: 0.8, // 设置较低的透明度，以确保内容不会被遮盖
-          zIndex: 1 // 保证背景在底层
-        }}
-      >
-        <Box
-          sx={{
-            position: 'relative',
-            zIndex: 2, // 确保内容在背景图之上显示
-          }}
-        >
+
+      <DialogContent dividers>
+        <Box>
           <ReactMarkdown>
             {license.summary || license.spdx_description}
           </ReactMarkdown>
-          
-          <Typography variant="subtitle1" gutterBottom>兼容性指标：</Typography>
-          <Grid container spacing={1} sx={{ mb: 2 }}>
-            {Object.entries(license.compatibility).map(([key, value]) => (
-              <Grid item xs={6} key={key}>
-                <Tooltip title={`${compatibilityLabels[key as keyof typeof compatibilityLabels]}: ${value}/5`}>
-                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <Typography variant="caption" sx={{ minWidth: '80px', fontSize: '0.75rem' }}>
-                      {compatibilityLabels[key as keyof typeof compatibilityLabels]}
-                    </Typography>
-                    <LinearProgress 
-                      variant="determinate" 
-                      value={value * 20} 
-                      sx={{ 
-                        flexGrow: 1, 
-                        ml: 1,
-                        height: 6,
-                        borderRadius: 3,
-                        '& .MuiLinearProgress-bar': {
-                          borderRadius: 3,
-                          backgroundColor: compatibilityColors[key as keyof typeof compatibilityColors]
-                        }
-                      }} 
-                    />
-                  </Box>
-                </Tooltip>
-              </Grid>
-            ))}
-          </Grid>
-
-          <Divider sx={{ my: 2 }} />
           
           <Typography variant="subtitle1" gutterBottom>分析：</Typography>
           <Box sx={{ '& > p': { marginBottom: 2 } }}>
@@ -131,6 +130,7 @@ const LicenseDetailDialog: React.FC<LicenseDetailDialogProps> = ({ license, open
           </Box>
         </Box>
       </DialogContent>
+
       <DialogActions>
         <Button 
           variant="outlined" 
