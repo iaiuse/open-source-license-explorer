@@ -1,79 +1,86 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { Typography, Card, CardContent, CardMedia, List, ListItem, ListItemText, Link } from '@mui/material';
-import licenses from '../data/licenses.json';
+import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { 
+  Typography, 
+  Box, 
+  Button, 
+  Chip,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  CircularProgress
+} from '@mui/material';
 import { License } from '../types';
+import licensesData from '../data/licenses.json';
 
 const LicenseDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const license = (licenses as License[]).find((l) => l.keyword === id);
+  const navigate = useNavigate();
+  const [license, setLicense] = useState<License | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchLicense = () => {
+      setLoading(true);
+      // In a real app, this would be an API call
+      const foundLicense = (licensesData as License[]).find(l => l.keyword === id);
+      setLicense(foundLicense || null);
+      setLoading(false);
+    };
+
+    fetchLicense();
+  }, [id]);
+
+  const handleClose = () => {
+    navigate('/');
+  };
+
+  if (loading) {
+    return <CircularProgress />;
+  }
 
   if (!license) {
     return <Typography>License not found</Typography>;
   }
 
   return (
-    <Card>
-      {license.logo && (
-        <CardMedia
-          component="img"
-          height="140"
-          image={license.logo}
-          alt={`${license.name} logo`}
-        />
-      )}
-      <CardContent>
-        <Typography variant="h5" component="div" gutterBottom>
-          {license.name}
-        </Typography>
+    <Dialog open={true} onClose={handleClose} maxWidth="md" fullWidth>
+      <DialogTitle>{license.name}</DialogTitle>
+      <DialogContent>
         <Typography variant="body1" paragraph>
-          {license.description}
+          {license.spdx_description || license.summary}
         </Typography>
-        {license.attributes && (
-          <>
-            <Typography variant="h6" gutterBottom>Attributes:</Typography>
-            <List>
-              {Object.entries(license.attributes).map(([key, value]) => (
-                <ListItem key={key}>
-                  <ListItemText primary={`${key}: ${value ? 'Yes' : 'No'}`} />
-                </ListItem>
-              ))}
-            </List>
-          </>
-        )}
-        {license.popularProjects && license.popularProjects.length > 0 && (
-          <>
-            <Typography variant="h6" gutterBottom>Popular Projects:</Typography>
-            <List>
-              {license.popularProjects.map((project) => (
-                <ListItem key={project.name}>
-                  <ListItemText primary={project.name} />
-                </ListItem>
-              ))}
-            </List>
-          </>
-        )}
-        {license.details && (
-          <>
-            <Typography variant="h6" gutterBottom>Details:</Typography>
-            <Typography variant="body2" paragraph>
-              {license.details}
-            </Typography>
-          </>
-        )}
-        {license.officialUrl && (
-          <Typography variant="body2" paragraph>
-            Official Website: <Link href={license.officialUrl} target="_blank" rel="noopener noreferrer">
-              {license.officialUrl}
-            </Link>
-          </Typography>
-        )}
-        <Typography variant="h6" gutterBottom>Full License Text:</Typography>
-        <Typography variant="body2" component="pre" style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
-          {license.fullText}
+        <Typography variant="subtitle1" gutterBottom>分析：</Typography>
+        <Typography variant="body2" paragraph>
+          {license.tldrlegal_analysis}
         </Typography>
-      </CardContent>
-    </Card>
+        <Typography variant="subtitle1" gutterBottom>热门项目：</Typography>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+          {license.popular_projects.map((project) => (
+            <Chip 
+              key={project.name}
+              label={`${project.name} (${project.stars} stars)`}
+              component="a"
+              href={project.url}
+              target="_blank"
+              clickable
+            />
+          ))}
+        </Box>
+        <Button 
+          sx={{ mt: 2 }}
+          variant="outlined" 
+          href={license.full_text_url} 
+          target="_blank"
+        >
+          查看完整许可证文本
+        </Button>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={handleClose}>关闭</Button>
+      </DialogActions>
+    </Dialog>
   );
 };
 

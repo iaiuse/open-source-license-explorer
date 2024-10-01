@@ -1,36 +1,46 @@
-import React, { useState } from 'react';
-import { Table, TableBody, TableCell, TableHead, TableRow, Paper } from '@mui/material';
-import licenses from '../data/licenses.json';
+import React from 'react';
+import { Table, TableBody, TableCell, TableHead, TableRow, Paper, Typography } from '@mui/material';
 import { License } from '../types';
 
-const LicenseComparison: React.FC = () => {
-  const [selectedLicenses, setSelectedLicenses] = useState<License[]>([]);
+interface LicenseComparisonProps {
+  selectedLicenses: License[];
+}
 
-  // Check if the licenses have attributes and safely access them
-  const getAttributes = (license: License) => license.attributes || {};
+const LicenseComparison: React.FC<LicenseComparisonProps> = ({ selectedLicenses }) => {
+  if (selectedLicenses.length === 0) {
+    return <Typography>请选择许可证进行比较</Typography>;
+  }
+
+  const compatibilityLabels = {
+    commercial: '商业使用',
+    modification: '修改',
+    distribution: '分发',
+    private: '私有使用',
+    patent: '专利保护',
+    copyleft: 'Copyleft强度'
+  };
 
   return (
     <Paper>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Feature</TableCell>
+            <TableCell>特性</TableCell>
             {selectedLicenses.map((license) => (
               <TableCell key={license.keyword}>{license.name}</TableCell>
             ))}
           </TableRow>
         </TableHead>
         <TableBody>
-          {selectedLicenses.length > 0 && 
-            Object.keys(getAttributes(selectedLicenses[0])).map((attr) => (
-              <TableRow key={attr}>
-                <TableCell>{attr}</TableCell>
-                {selectedLicenses.map((license) => (
-                  <TableCell key={`${license.keyword}-${attr}`}>
-                    {getAttributes(license)[attr] ? 'Yes' : 'No'}
-                  </TableCell>
-                ))}
-              </TableRow>
+          {Object.entries(compatibilityLabels).map(([key, label]) => (
+            <TableRow key={key}>
+              <TableCell>{label}</TableCell>
+              {selectedLicenses.map((license) => (
+                <TableCell key={`${license.keyword}-${key}`}>
+                  {license.compatibility[key as keyof typeof license.compatibility]}/5
+                </TableCell>
+              ))}
+            </TableRow>
           ))}
         </TableBody>
       </Table>
