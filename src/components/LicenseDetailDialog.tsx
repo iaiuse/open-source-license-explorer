@@ -55,6 +55,13 @@ const LicenseDetailDialog: React.FC<LicenseDetailDialogProps> = ({ license, open
     return periodIndex > 0 ? text.substring(0, periodIndex + 1) : text;
   };
 
+  // 将兼容性指标按 2 个一组分成数组
+  const compatibilityEntries = Object.entries(license.compatibility);
+  const groupedCompatibility = [];
+  for (let i = 0; i < compatibilityEntries.length; i += 2) {
+    groupedCompatibility.push(compatibilityEntries.slice(i, i + 2));
+  }
+
   return (
     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
       <DialogTitle>
@@ -81,26 +88,25 @@ const LicenseDetailDialog: React.FC<LicenseDetailDialogProps> = ({ license, open
           <Box>
             <Table size="small" sx={{ minWidth: 200 }}>
               <TableBody>
-                {Object.entries(license.compatibility).map(([key, value], index) => (
-                  <TableRow key={index}>
-                    <TableCell>
-                      <Typography variant="body2">{compatibilityLabels[key as keyof typeof compatibilityLabels]}</Typography>
-                    </TableCell>
-                    <TableCell align="right">
-                      {/* 用进度条展示评分 */}
-                      <LinearProgress
-                        variant="determinate"
-                        value={value * 20}  // 进度条的值从0到100，所以将5分制乘以20
-                        sx={{ 
-                          height: 8, 
-                          borderRadius: 5,
-                          backgroundColor: '#e0e0e0',
-                          '& .MuiLinearProgress-bar': {
-                            backgroundColor: compatibilityColors[key as keyof typeof compatibilityColors]
-                          }
-                        }}
-                      />
-                    </TableCell>
+                {groupedCompatibility.map((group, rowIndex) => (
+                  <TableRow key={rowIndex}>
+                    {group.map(([key, value]) => (
+                      <TableCell key={key} sx={{ paddingRight: 2 }}>
+                        <Typography variant="body2">{compatibilityLabels[key as keyof typeof compatibilityLabels]}</Typography>
+                        <LinearProgress
+                          variant="determinate"
+                          value={value * 20}  // 进度条的值从0到100，所以将5分制乘以20
+                          sx={{ 
+                            height: 8, 
+                            borderRadius: 5,
+                            backgroundColor: '#e0e0e0',
+                            '& .MuiLinearProgress-bar': {
+                              backgroundColor: compatibilityColors[key as keyof typeof compatibilityColors]
+                            }
+                          }}
+                        />
+                      </TableCell>
+                    ))}
                   </TableRow>
                 ))}
               </TableBody>
