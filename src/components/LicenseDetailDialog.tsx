@@ -86,7 +86,7 @@ const LicenseDetailDialog: React.FC<LicenseDetailDialogProps> = ({ license, open
 
           {/* 右侧兼容性指标表格 */}
           <Box>
-            <Table size="small" sx={{ minWidth: 200 }}>
+            <Table size="small" sx={{ minWidth: 300 }}>
               <TableBody>
                 {groupedCompatibility.map((group, rowIndex) => (
                   <TableRow key={rowIndex}>
