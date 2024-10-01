@@ -13,7 +13,6 @@ import {
   Tooltip,
   Divider
 } from '@mui/material';
-import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import { License } from '../types';
 
@@ -49,18 +48,33 @@ const LicenseDetailDialog: React.FC<LicenseDetailDialogProps> = ({ license, open
   return (
     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
       <DialogTitle>
-        <Box display="flex" alignItems="center">
-          {license.logo && (
-            <Box sx={{ width: 40, height: 40, position: 'relative', marginRight: 2 }}>
-              <Image
-                src={license.logo}
-                alt={`${license.name} logo`}
-                layout="fill"
-                objectFit="contain"
-              />
-            </Box>
-          )}
-          <Typography variant="h6">{license.name}</Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            position: 'relative',
+            // 背景颜色和透明度
+            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            borderRadius: '5px',
+            padding: '10px',
+            mb: 2,
+            '&:before': {
+              content: '""',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              background: `url(${license.logo}) no-repeat center/contain`,
+              opacity: 0.1, // 控制徽标的透明度
+              zIndex: 1,
+            },
+            zIndex: 2 // 确保其他内容显示在背景图上方
+          }}
+        >
+          <Typography variant="h6" sx={{ zIndex: 2 }}>
+            {license.name}
+          </Typography>
         </Box>
       </DialogTitle>
       <DialogContent dividers>

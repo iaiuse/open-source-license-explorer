@@ -147,7 +147,7 @@ SPDX描述: {license_info['spdx_description']}
 维基百科简介: {license_info['wikipedia_intro']}
 TLDRLegal分析: {license_info['tldrlegal_analysis']}
 
-请提供一个不超过100字的中文摘要，涵盖许可证的核心特点、主要权限和限制。确保摘要简洁明了，便于快速理解。"""
+请提供一个超过500字的中文摘要，不超过1000字，涵盖许可证的核心特点、主要权限和限制。确保摘要简洁明了，便于快速理解。"""
 
     response = client.chat.completions.create(
         model="glm-4",
