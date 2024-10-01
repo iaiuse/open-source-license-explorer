@@ -1,0 +1,1394 @@
+[
+  {
+    "name": "Academic Free License v3.0",
+    "keyword": "AFL-3.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 5,
+      "private": 5,
+      "patent": 3,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "首先，我们需要了解Academic Free License v3.0 (AFL-3.0) 的具体条款。以下是该许可证的一些关键特点：\n\n### 允许的行为：\n1. **商业使用**：允许商业使用。\n2. **修改代码**：允许修改代码。\n3. **分发**：允许分发原始和修改后的代码。\n4. **私有使用**：允许私有使用。\n5. **专利权**：提供一定的专利权保护。\n\n### 禁止的行为：\n1. **商标使用**：不允许使用原始版权持有者的商标。\n2. **责任限制**：对软件的使用不负任何责任。\n\n基于这些信息，我们可以为各个方面评分：\n\n1. **商业使用友好度**: 5分 - AFL-3.0 允许完全的商业使用，没有限制。\n2. **修改代码自由度**: 5分 - 允许自由修改代码，没有限制。\n3. **分发限制程度**: 5分 - 允许自由分发原始和修改后的代码，几乎没有限制。\n4. **私有使用自由度**: 5分 - 允许完全的私有使用，没有限制。\n5. **专利保护强度**: 3分 - 提供一定的专利保护，但范围有限。\n6. **Copyleft强度**: 1分 - AFL-3.0 是一个非Copyleft许可证，不要求派生作品使用相同许可证。\n\n### JSON输出\n\n\n### 详细解释\n- **商业使用友好度**: 5分 - AFL-3.0 明确允许商业使用，没有任何限制。\n- **修改代码自由度**: 5分 - 许可证允许用户自由修改代码，无需额外许可。\n- **分发限制程度**: 5分 - 用户可以自由分发原始和修改后的代码，几乎没有限制。\n- **私有使用自由度**: 5分 - 许可证允许用户在私有环境中自由使用软件。\n- **专利保护强度**: 3分 - 虽然提供了一定的专利保护，但保护范围有限，不如一些专门的专利保护许可证。\n- **Copyleft强度**: 1分 - AFL-3.0 是一个非Copyleft许可证，不要求派生作品必须使用相同的许可证，给予了用户更多的自由。\n\n希望这些评分和解释能帮助你更好地理解AFL-3.0许可证的特点。",
+    "popular_projects": [
+      {
+        "name": "Open-PS2-Loader",
+        "url": "https://github.com/ps2homebrew/Open-PS2-Loader",
+        "stars": 2141
+      },
+      {
+        "name": "ProtTrans",
+        "url": "https://github.com/agemagician/ProtTrans",
+        "stars": 1099
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/AFL-3.0.html",
+    "summary": "Academic Free License v3.0 (AFL-3.0) 允许商业使用、修改、分发和私有使用，提供有限专利保护，禁止使用原始商标，不负使用责任。非Copyleft，派生作品无需同许可证。适合需灵活性和商业兼容的项目。"
+  },
+  {
+    "name": "Apache License 2.0",
+    "keyword": "Apache-2.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": "",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/ASF_Logo.svg/220px-ASF_Logo.svg.png",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 5,
+      "private": 5,
+      "patent": 5,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "### Apache License 2.0 评分分析\n\n**允许的行为：**\n- 商业使用\n- 修改代码\n- 分发原始和修改后的代码\n- 私有使用\n- 提供专利权保护\n\n**禁止的行为：**\n- 使用原作者的商标\n- 改变许可证条款\n- 对原始代码进行诽谤\n\n**评分及解释：**\n\n1. **商业使用友好度: 5分 - 解释**\n   - Apache License 2.0 允许无限制的商业使用，没有任何限制条件。\n\n2. **修改代码自由度: 5分 - 解释**\n   - 该许可证允许用户自由修改代码，只需在修改后的文件中保留原始版权声明和许可证声明。\n\n3. **分发限制程度: 5分 - 解释**\n   - 分发几乎没有限制，允许分发原始和修改后的代码，只需遵守许可证的相关要求（如保留版权声明和许可证声明）。\n\n4. **私有使用自由度: 5分 - 解释**\n   - 完全允许私有使用，没有任何限制。\n\n5. **专利保护强度: 5分 - 解释**\n   - Apache License 2.0 提供强有力的专利保护条款，贡献者授予使用其专利的权利，并且不会对使用者提起专利诉讼。\n\n6. **Copyleft强度: 1分 - 解释**\n   - 该许可证没有Copyleft条款，允许用户在修改后的代码中使用不同的许可证。\n\n### JSON 结构输出",
+    "popular_projects": [
+      {
+        "name": "tensorflow",
+        "url": "https://github.com/tensorflow/tensorflow",
+        "stars": 185782
+      },
+      {
+        "name": "JavaGuide",
+        "url": "https://github.com/Snailclimb/JavaGuide",
+        "stars": 146178
+      },
+      {
+        "name": "transformers",
+        "url": "https://github.com/huggingface/transformers",
+        "stars": 132807
+      },
+      {
+        "name": "kubernetes",
+        "url": "https://github.com/kubernetes/kubernetes",
+        "stars": 110158
+      },
+      {
+        "name": "scrcpy",
+        "url": "https://github.com/Genymobile/scrcpy",
+        "stars": 109681
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/Apache-2.0.html",
+    "summary": "Apache License 2.0 允许商业使用、修改和分发代码，提供专利保护，禁止使用原作者商标和改变许可证条款。无Copyleft限制，适合商业和私有使用。"
+  },
+  {
+    "name": "Artistic License 2.0",
+    "keyword": "Artistic-2.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": "The Artistic License is an open-source license used for certain free and open-source software packages, most notably the standard implementation of the Perl programming language and most CPAN modules, which are dual-licensed under the Artistic License and the GNU General Public License (GPL).",
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 4,
+      "distribution": 3,
+      "private": 5,
+      "patent": 1,
+      "copyleft": 2
+    },
+    "tldrlegal_analysis": "### Artistic License 2.0 分析及评分\n\n#### 允许的行为：\n1. 允许商业使用。\n2. 允许修改代码。\n3. 允许分发修改后的代码，但需遵守特定条件。\n4. 允许私有使用。\n\n#### 禁止的行为：\n1. 修改后的代码分发时，需保留原始版权声明和许可证。\n2. 不得使用原作者的名称或商标进行宣传。\n\n#### 评分及解释：\n\n**1. 商业使用友好度: 5分 - 解释**\nArtistic License 2.0 允许商业使用，没有任何限制，因此商业使用友好度非常高。\n\n**2. 修改代码自由度: 4分 - 解释**\n虽然允许修改代码，但要求在分发修改后的代码时遵守特定条件（如保留原始版权声明和许可证），因此自由度较高但不是完全无限制。\n\n**3. 分发限制程度: 3分 - 解释**\n允许分发修改后的代码，但需要遵守一些条件（如保留原始版权声明和许可证），因此存在一定限制。\n\n**4. 私有使用自由度: 5分 - 解释**\n完全允许私有使用，没有任何限制。\n\n**5. 专利保护强度: 1分 - 解释**\nArtistic License 2.0 没有明确的专利保护条款，因此专利保护强度较低。\n\n**6. Copyleft强度: 2分 - 解释**\n虽然有一些Copyleft要求（如保留原始版权声明和许可证），但不如GPL等许可证严格，因此Copyleft强度较低。\n\n### JSON 结构输出",
+    "popular_projects": [
+      {
+        "name": "Java",
+        "url": "https://github.com/DuGuQiuBai/Java",
+        "stars": 12746
+      },
+      {
+        "name": "awesome-honeypots",
+        "url": "https://github.com/paralax/awesome-honeypots",
+        "stars": 8489
+      },
+      {
+        "name": "emojicode",
+        "url": "https://github.com/emojicode/emojicode",
+        "stars": 3248
+      },
+      {
+        "name": "easy12306",
+        "url": "https://github.com/zhaipro/easy12306",
+        "stars": 2893
+      },
+      {
+        "name": "mojo",
+        "url": "https://github.com/mojolicious/mojo",
+        "stars": 2665
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/Artistic-2.0.html",
+    "summary": "Artistic License 2.0允许商业使用、修改和私有使用，但分发修改代码需保留原始版权和许可证，禁止用原作者名义宣传。商业和私有使用友好，修改自由度较高，分发有一定限制，专利保护和Copyleft强度低。"
+  },
+  {
+    "name": "Boost Software License 1.0",
+    "keyword": "BSL-1.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 5,
+      "private": 5,
+      "patent": 1,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "### Boost Software License 1.0 分析与评分\n\n#### 允许的行为：\n- 商业使用\n- 修改代码\n- 分发原始和修改后的代码\n- 私有使用\n\n#### 禁止的行为：\n- 没有明确的禁止行为，但要求保留原始版权声明和免责声明\n\n#### 评分与解释：\n\n1. **商业使用友好度: 5分**\n   - 解释：Boost Software License 1.0 允许无限制的商业使用，没有任何关于商业使用的限制。\n\n2. **修改代码自由度: 5分**\n   - 解释：许可证允许用户自由修改代码，没有任何限制。\n\n3. **分发限制程度: 5分**\n   - 解释：许可证允许用户自由分发原始和修改后的代码，只需保留原始版权声明和免责声明。\n\n4. **私有使用自由度: 5分**\n   - 解释：许可证允许用户自由进行私有使用，没有任何限制。\n\n5. **专利保护强度: 1分**\n   - 解释：Boost Software License 1.0 没有明确的专利保护条款。\n\n6. **Copyleft强度: 1分**\n   - 解释：该许可证没有Copyleft条款，不要求派生作品使用相同许可证。\n\n### JSON 输出",
+    "popular_projects": [
+      {
+        "name": "Catch2",
+        "url": "https://github.com/catchorg/Catch2",
+        "stars": 18517
+      },
+      {
+        "name": "dlib",
+        "url": "https://github.com/davisking/dlib",
+        "stars": 13456
+      },
+      {
+        "name": "boost",
+        "url": "https://github.com/boostorg/boost",
+        "stars": 7061
+      },
+      {
+        "name": "td",
+        "url": "https://github.com/tdlib/td",
+        "stars": 7024
+      },
+      {
+        "name": "red",
+        "url": "https://github.com/red/red",
+        "stars": 5515
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/BSL-1.0.html",
+    "summary": "**Boost Software License 1.0 摘要：**\n\n允许商业使用、修改、分发（需保留版权声明和免责声明）、私有使用。无明确禁止行为，无专利保护和Copyleft条款，高度自由。适合需灵活使用和分发的项目。"
+  },
+  {
+    "name": "BSD 2-Clause \"Simplified\" License",
+    "keyword": "BSD-2-Clause",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 4,
+      "private": 5,
+      "patent": 1,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "### 分析及评分\n\n#### 1. 商业使用友好度\n**分数: 5 - 解释**\nBSD 2-Clause License 允许商业使用，没有任何限制。用户可以自由地将软件用于商业目的。\n\n#### 2. 修改代码自由度\n**分数: 5 - 解释**\n该许可证允许用户自由修改代码，没有任何限制。\n\n#### 3. 分发限制程度\n**分数: 4 - 解释**\n虽然BSD 2-Clause License允许自由分发，但要求保留原始版权声明和免责声明。这种要求是很轻微的，因此得分接近最高。\n\n#### 4. 私有使用自由度\n**分数: 5 - 解释**\n该许可证允许用户自由地进行私有使用，没有任何限制。\n\n#### 5. 专利保护强度\n**分数: 1 - 解释**\nBSD 2-Clause License没有包含专利保护条款，因此在这方面得分较低。\n\n#### 6. Copyleft强度\n**分数: 1 - 解释**\n该许可证没有Copyleft条款，允许用户在分发时使用不同的许可证，因此得分最低。\n\n### JSON输出\n\n\n\n这个JSON结构包含了各个方面的评分，便于快速理解和比较。",
+    "popular_projects": [
+      {
+        "name": "Leaflet",
+        "url": "https://github.com/Leaflet/Leaflet",
+        "stars": 41120
+      },
+      {
+        "name": "brew",
+        "url": "https://github.com/Homebrew/brew",
+        "stars": 40951
+      },
+      {
+        "name": "serenity",
+        "url": "https://github.com/SerenityOS/serenity",
+        "stars": 30449
+      },
+      {
+        "name": "redash",
+        "url": "https://github.com/getredash/redash",
+        "stars": 26060
+      },
+      {
+        "name": "restic",
+        "url": "https://github.com/restic/restic",
+        "stars": 25934
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/BSD-2-Clause.html",
+    "summary": "BSD 2-Clause License允许商业使用、自由修改和私有使用，无专利保护。分发时需保留原始版权和免责声明，无Copyleft限制，可使用不同许可证。适合需灵活性和兼容性的项目。"
+  },
+  {
+    "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+    "keyword": "BSD-3-Clause",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 4,
+      "private": 5,
+      "patent": 3,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "### BSD 3-Clause \"New\" or \"Revised\" License 分析\n\n#### 允许的行为：\n1. 商业使用\n2. 修改代码\n3. 分发原始和修改后的代码\n4. 私有使用\n\n#### 禁止的行为：\n1. 使用原作者的名字推广衍生产品\n2. 在衍生作品中删除或修改原始许可证声明\n3. 在衍生作品中删除或修改免责声明\n\n### 评分及解释\n\n**商业使用友好度: 5 - 解释**\n- BSD 3-Clause许可证允许无限制的商业使用，没有任何关于商业使用的特殊限制。\n\n**修改代码自由度: 5 - 解释**\n- 许可证允许用户自由修改代码，没有任何关于修改代码的限制。\n\n**分发限制程度: 4 - 解释**\n- 虽然允许分发原始和修改后的代码，但需要在衍生作品中保留原始许可证声明和免责声明，这带来了一些轻微的限制。\n\n**私有使用自由度: 5 - 解释**\n- 许可证完全允许私有使用，没有任何关于私有使用的限制。\n\n**专利保护强度: 3 - 解释**\n- BSD 3-Clause许可证包含一个专利条款，但相对较弱，主要是在免责声明中提到不提供专利许可。\n\n**Copyleft强度: 1 - 解释**\n- BSD 3-Clause许可证没有Copyleft条款，允许用户在衍生作品中使用不同的许可证。\n\n### JSON输出",
+    "popular_projects": [
+      {
+        "name": "freeCodeCamp",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+        "stars": 402852
+      },
+      {
+        "name": "flutter",
+        "url": "https://github.com/flutter/flutter",
+        "stars": 165167
+      },
+      {
+        "name": "go",
+        "url": "https://github.com/golang/go",
+        "stars": 123195
+      },
+      {
+        "name": "django",
+        "url": "https://github.com/django/django",
+        "stars": 79411
+      },
+      {
+        "name": "flask",
+        "url": "https://github.com/pallets/flask",
+        "stars": 67698
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/BSD-3-Clause.html",
+    "summary": "BSD 3-Clause许可证允许商业使用、修改和分发代码，支持私有使用。禁止用原作者名字推广衍生品，需保留原始许可证和免责声明。无Copyleft，专利保护较弱。适合商业和自由开发，但需注意声明保留。"
+  },
+  {
+    "name": "BSD 3-Clause Clear License",
+    "keyword": "BSD-3-Clause-Clear",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 5,
+      "private": 5,
+      "patent": 3,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "首先，我们需要了解 \"BSD 3-Clause Clear License\" 的具体条款，以便进行准确评分。\n\n### BSD 3-Clause Clear License 条款概述：\n1. **允许的行为**：\n   - 商业使用\n   - 修改代码\n   - 分发原始或修改后的代码\n\n2. **禁止的行为**：\n   - 删除或修改版权声明和许可证声明\n   - 使用原作者的名称或贡献者的名称进行推广\n\n### 评分及解释：\n\n1. **商业使用友好度**:\n   - **分数**: 5 - 解释: BSD 3-Clause Clear License 允许完全的商业使用，没有任何限制。\n\n2. **修改代码自由度**:\n   - **分数**: 5 - 解释: 许可证允许用户自由修改代码，只要保留原始版权和许可证声明。\n\n3. **分发限制程度**:\n   - **分数**: 5 - 解释: 许可证允许自由分发原始或修改后的代码，只需遵守版权和许可证声明的要求。\n\n4. **私有使用自由度**:\n   - **分数**: 5 - 解释: 许可证对私有使用没有任何限制，用户可以自由地在私有项目中使用。\n\n5. **专利保护强度**:\n   - **分数**: 3 - 解释: BSD 3-Clause Clear License 提供了一些基本的专利保护，但不如某些专门针对专利的许可证（如Apache 2.0）强。\n\n6. **Copyleft强度**:\n   - **分数**: 1 - 解释: BSD 3-Clause Clear License 是一种宽松的许可证，没有Copyleft要求，不强制派生作品使用相同许可证。\n\n### JSON 输出：\n\n\n\n这个JSON结构包含了每个方面的评分，反映了BSD 3-Clause Clear License在不同维度的特性。",
+    "popular_projects": [
+      {
+        "name": "hamilton",
+        "url": "https://github.com/DAGWorks-Inc/hamilton",
+        "stars": 1752
+      },
+      {
+        "name": "CompressAI",
+        "url": "https://github.com/InterDigitalInc/CompressAI",
+        "stars": 1160
+      },
+      {
+        "name": "burr",
+        "url": "https://github.com/DAGWorks-Inc/burr",
+        "stars": 1149
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/BSD-3-Clause-Clear.html",
+    "summary": "BSD 3-Clause Clear License允许商业使用、修改和分发代码，但需保留版权和许可证声明，禁止用原作者名义推广。宽松无Copyleft，提供基本专利保护。适合需灵活性和商业友好的项目。"
+  },
+  {
+    "name": "BSD 4-Clause \"Original\" or \"Old\" License",
+    "keyword": "BSD-4-Clause",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 4,
+      "private": 5,
+      "patent": 1,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "### BSD 4-Clause \"Original\" or \"Old\" License 分析\n\n#### 允许的行为：\n1. 商业使用\n2. 修改代码\n3. 分发原始和修改后的代码\n4. 私有使用\n\n#### 禁止的行为：\n1. 在广告材料中使用贡献者的名字来背书或推广产品\n\n### 评分及解释\n\n**商业使用友好度: 5 - 解释**\nBSD 4-Clause 许可证允许无限制的商业使用，没有任何关于商业用途的特殊限制。\n\n**修改代码自由度: 5 - 解释**\n该许可证允许用户自由修改代码，没有任何关于修改的限制。\n\n**分发限制程度: 4 - 解释**\n虽然允许分发原始和修改后的代码，但需要在所有分发的副本中包含原始许可证和版权声明，以及禁止在广告材料中使用贡献者的名字。这些要求构成了一些轻微的限制。\n\n**私有使用自由度: 5 - 解释**\n该许可证允许用户自由地进行私有使用，没有任何限制。\n\n**专利保护强度: 1 - 解释**\nBSD 4-Clause 许可证没有明确的专利保护条款，因此在这方面提供的保护非常有限。\n\n**Copyleft强度: 1 - 解释**\n该许可证没有Copyleft条款，允许用户在修改后的代码中使用其他许可证，没有要求派生作品必须使用相同许可证。\n\n### JSON 输出",
+    "popular_projects": [
+      {
+        "name": "imagepy",
+        "url": "https://github.com/Image-Py/imagepy",
+        "stars": 1300
+      },
+      {
+        "name": "Sileo",
+        "url": "https://github.com/Sileo/Sileo",
+        "stars": 1203
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/BSD-4-Clause.html",
+    "summary": "BSD 4-Clause许可证允许商业使用、修改和分发代码，私有使用无限制。需保留原始许可证和版权声明，禁止在广告中使用贡献者名字。无专利保护和Copyleft条款，修改后代码可使用其他许可证。"
+  },
+  {
+    "name": "BSD Zero Clause License",
+    "keyword": "0BSD",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 5,
+      "private": 5,
+      "patent": 1,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "### BSD Zero Clause License 分析与评分\n\n**允许的行为：**\n- 无限制地使用、复制、修改、合并、发布、分发、再许可和销售软件的副本。\n- 无需提供版权声明、许可声明或其他任何形式的声明。\n\n**禁止的行为：**\n- 无明确禁止行为，但需遵守适用的法律。\n\n**评分及解释：**\n\n1. **商业使用友好度: 5分 - 解释**\n   - BSD Zero Clause License 允许无限制的商业使用，没有任何限制条件。\n\n2. **修改代码自由度: 5分 - 解释**\n   - 许可证允许自由修改代码，没有任何限制。\n\n3. **分发限制程度: 5分 - 解释**\n   - 许可证允许无限制地分发软件，没有任何附加条件。\n\n4. **私有使用自由度: 5分 - 解释**\n   - 许可证允许无限制的私有使用，没有任何限制。\n\n5. **专利保护强度: 1分 - 解释**\n   - BSD Zero Clause License 没有包含任何专利保护条款。\n\n6. **Copyleft强度: 1分 - 解释**\n   - 该许可证没有Copyleft条款，不要求派生作品使用相同许可证。\n\n### JSON 结构输出",
+    "popular_projects": [
+      {
+        "name": "smoltcp",
+        "url": "https://github.com/smoltcp-rs/smoltcp",
+        "stars": 3747
+      },
+      {
+        "name": "gatsby-starter-blog",
+        "url": "https://github.com/gatsbyjs/gatsby-starter-blog",
+        "stars": 3517
+      },
+      {
+        "name": "XiaoMi-Pro-Hackintosh",
+        "url": "https://github.com/daliansky/XiaoMi-Pro-Hackintosh",
+        "stars": 2611
+      },
+      {
+        "name": "toybox",
+        "url": "https://github.com/landley/toybox",
+        "stars": 2396
+      },
+      {
+        "name": "poison",
+        "url": "https://github.com/devinus/poison",
+        "stars": 2024
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/0BSD.html",
+    "summary": "BSD Zero Clause License 允许无限制使用、复制、修改、分发和销售软件，无需声明版权或许可。无明确禁止行为，但需守法。商业友好，修改自由，无分发限制，无专利保护和Copyleft条款。"
+  },
+  {
+    "name": "Creative Commons Zero v1.0 Universal",
+    "keyword": "CC0-1.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 5,
+      "private": 5,
+      "patent": 1,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "### Creative Commons Zero v1.0 Universal 许可证分析\n\n**允许的行为：**\n- 商业使用\n- 修改代码\n- 分发\n- 私有使用\n\n**禁止的行为：**\n- 无特定禁止行为（基本上等同于放弃所有版权）\n\n### 评分及解释\n\n1. **商业使用友好度: 5分 - 解释**\n   - CC0 v1.0 Universal 允许完全的商业使用，没有任何限制。\n\n2. **修改代码自由度: 5分 - 解释**\n   - 该许可证允许自由修改代码，没有任何限制。\n\n3. **分发限制程度: 5分 - 解释**\n   - 几乎没有分发限制，可以自由分发原始或修改后的代码。\n\n4. **私有使用自由度: 5分 - 解释**\n   - 完全允许自由的私有使用，没有任何限制。\n\n5. **专利保护强度: 1分 - 解释**\n   - CC0 v1.0 Universal 没有明确的专利保护条款。\n\n6. **Copyleft强度: 1分 - 解释**\n   - 该许可证没有Copyleft条款，不要求派生作品使用相同许可证。\n\n### JSON输出",
+    "popular_projects": [
+      {
+        "name": "awesome",
+        "url": "https://github.com/sindresorhus/awesome",
+        "stars": 326872
+      },
+      {
+        "name": "gitignore",
+        "url": "https://github.com/github/gitignore",
+        "stars": 161469
+      },
+      {
+        "name": "awesome-chatgpt-prompts",
+        "url": "https://github.com/f/awesome-chatgpt-prompts",
+        "stars": 111195
+      },
+      {
+        "name": "Awesome-Hacking",
+        "url": "https://github.com/Hack-with-Github/Awesome-Hacking",
+        "stars": 83348
+      },
+      {
+        "name": "awesome-mac",
+        "url": "https://github.com/jaywcjlove/awesome-mac",
+        "stars": 75432
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/CC0-1.0.html",
+    "summary": "**Creative Commons Zero v1.0 Universal (CC0 v1.0) 许可证摘要：**\n\n允许商业使用、修改、分发和私有使用，无特定禁止行为，基本放弃所有版权。无专利保护和Copyleft条款，提供最大自由度。适合需极高灵活性的项目。"
+  },
+  {
+    "name": "Creative Commons Attribution 4.0 International",
+    "keyword": "CC-BY-4.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": "",
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 5,
+      "private": 5,
+      "patent": 1,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "Creative Commons Attribution 4.0 International (CC BY 4.0) 是一个广泛使用的开源许可证，主要特点是对使用者较为宽松，但要求使用者必须对原作者进行适当的署名。以下是对该许可证各方面的评分及解释：\n\n### 评分及解释\n\n1. **商业使用友好度**: 5分 - CC BY 4.0 允许用户在商业和非商业环境中自由使用作品，没有任何限制。\n2. **修改代码自由度**: 5分 - 该许可证允许用户自由修改作品，只要在修改后的作品中适当署名原作者。\n3. **分发限制程度**: 5分 - 用户可以自由分发原作品及其修改版本，只要符合署名要求，几乎没有其他限制。\n4. **私有使用自由度**: 5分 - CC BY 4.0 对私有使用没有任何限制，用户可以在任何私有环境中使用作品。\n5. **专利保护强度**: 1分 - 该许可证没有包含明确的专利保护条款，不提供专利方面的保护。\n6. **Copyleft强度**: 1分 - CC BY 4.0 是一个非Copyleft许可证，不要求派生作品必须使用相同的许可证。\n\n### JSON结构输出\n\n\n\n以上评分基于CC BY 4.0许可证的具体条款和特性，确保了每个方面的评分都符合给定的标准。",
+    "popular_projects": [
+      {
+        "name": "free-programming-books",
+        "url": "https://github.com/EbookFoundation/free-programming-books",
+        "stars": 334942
+      },
+      {
+        "name": "30-seconds-of-code",
+        "url": "https://github.com/Chalarangelo/30-seconds-of-code",
+        "stars": 121362
+      },
+      {
+        "name": "every-programmer-should-know",
+        "url": "https://github.com/mtdvio/every-programmer-should-know",
+        "stars": 82829
+      },
+      {
+        "name": "og-aws",
+        "url": "https://github.com/open-guides/og-aws",
+        "stars": 35676
+      },
+      {
+        "name": "autogen",
+        "url": "https://github.com/microsoft/autogen",
+        "stars": 31416
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/CC-BY-4.0.html",
+    "summary": "**Creative Commons Attribution 4.0 International (CC BY 4.0)** 允许商业和非商业使用、修改及分发作品，仅需适当署名原作者。无专利保护和Copyleft要求，使用自由度高。"
+  },
+  {
+    "name": "Creative Commons Attribution Share Alike 4.0 International",
+    "keyword": "CC-BY-SA-4.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 4,
+      "private": 5,
+      "patent": 3,
+      "copyleft": 5
+    },
+    "tldrlegal_analysis": "### Creative Commons Attribution Share Alike 4.0 International (CC BY-SA 4.0) 分析\n\n#### 允许的行为：\n1. **商业使用**：允许商业使用，只要遵守许可条款。\n2. **修改**：允许修改作品，但必须基于相同许可证分发。\n3. **分发**：允许分发，但必须保留原始版权声明和许可证声明。\n4. **私有使用**：允许私有使用，不受限制。\n\n#### 禁止的行为：\n1. **添加额外限制**：不允许在分发时添加额外的限制。\n2. **非兼容许可证分发**：不允许使用非兼容的许可证分发修改后的作品。\n\n### 评分及解释\n\n1. **商业使用友好度**: 5 - 解释：CC BY-SA 4.0 允许商业使用，只要遵守许可条款，没有额外的商业使用限制。\n2. **修改代码自由度**: 5 - 解释：允许自由修改代码，但修改后的作品必须基于相同的许可证分发。\n3. **分发限制程度**: 4 - 解释：允许分发，但必须保留原始版权声明和许可证声明，有一定的限制。\n4. **私有使用自由度**: 5 - 解释：完全允许自由的私有使用，没有任何限制。\n5. **专利保护强度**: 3 - 解释：虽然有一些专利保护条款，但范围有限，不如一些专门的专利保护许可证强。\n6. **Copyleft强度**: 5 - 解释：强Copyleft，要求所有派生作品都必须使用相同的CC BY-SA 4.0许可证。\n\n### JSON 输出",
+    "popular_projects": [
+      {
+        "name": "coding-interview-university",
+        "url": "https://github.com/jwasham/coding-interview-university",
+        "stars": 304999
+      },
+      {
+        "name": "nodebestpractices",
+        "url": "https://github.com/goldbergyoni/nodebestpractices",
+        "stars": 99527
+      },
+      {
+        "name": "advanced-java",
+        "url": "https://github.com/doocs/advanced-java",
+        "stars": 75778
+      },
+      {
+        "name": "git-flight-rules",
+        "url": "https://github.com/k88hudson/git-flight-rules",
+        "stars": 41732
+      },
+      {
+        "name": "REKCARC-TSC-UHT",
+        "url": "https://github.com/PKUanonym/REKCARC-TSC-UHT",
+        "stars": 33162
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/CC-BY-SA-4.0.html",
+    "summary": "**CC BY-SA 4.0 许可证摘要**：允许商业使用、修改和分发，但需保留版权声明和许可证，且修改后作品须同许可证发布。禁止添加额外限制和非兼容许可证分发。强Copyleft，保障作品自由传播和修改。"
+  },
+  {
+    "name": "Do What The F*ck You Want To Public License",
+    "keyword": "WTFPL",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 5,
+      "private": 5,
+      "patent": 1,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "### 评分分析\n\n**1. 商业使用友好度: 5 - 解释**\nDWTFYWTPL（Do What The F*ck You Want To Public License）许可证没有任何关于商业使用的限制，允许用户在任何情况下自由使用代码，包括商业用途。\n\n**2. 修改代码自由度: 5 - 解释**\n该许可证允许用户自由修改代码，没有任何限制条件。\n\n**3. 分发限制程度: 5 - 解释**\n许可证允许用户自由分发代码，没有任何关于分发的限制。\n\n**4. 私有使用自由度: 5 - 解释**\n用户可以自由地将代码用于私有项目，没有任何限制。\n\n**5. 专利保护强度: 1 - 解释**\n该许可证没有包含任何专利保护条款，因此不提供专利保护。\n\n**6. Copyleft强度: 1 - 解释**\nDWTFYWTPL没有Copyleft条款，不要求派生作品使用相同的许可证。\n\n### JSON输出\n\n\n\n这个JSON结构包含了各个方面的评分，方便快速查看和理解。",
+    "popular_projects": [
+      {
+        "name": "wtfpython",
+        "url": "https://github.com/satwikkansal/wtfpython",
+        "stars": 35689
+      },
+      {
+        "name": "wtfjs",
+        "url": "https://github.com/denysdovhan/wtfjs",
+        "stars": 35049
+      },
+      {
+        "name": "awesome-php",
+        "url": "https://github.com/ziadoz/awesome-php",
+        "stars": 30871
+      },
+      {
+        "name": "nerdtree",
+        "url": "https://github.com/preservim/nerdtree",
+        "stars": 19556
+      },
+      {
+        "name": "Administrative-divisions-of-China",
+        "url": "https://github.com/modood/Administrative-divisions-of-China",
+        "stars": 18444
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/WTFPL.html",
+    "summary": "DWTFYWTPL许可证允许用户无限制地进行商业使用、修改、分发和私有使用代码，无专利保护和Copyleft要求，提供最大自由度。"
+  },
+  {
+    "name": "Educational Community License v2.0",
+    "keyword": "ECL-2.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 4,
+      "distribution": 4,
+      "private": 5,
+      "patent": 3,
+      "copyleft": 2
+    },
+    "tldrlegal_analysis": "首先，我们需要了解\"Educational Community License v2.0\"（ECL v2.0）的具体条款。ECL v2.0 是一个基于Apache许可证的变体，专门为教育机构设计。以下是对该许可证的分析和评分：\n\n### 允许的行为：\n1. 商业使用：允许。\n2. 修改代码：允许，但需要保留原始版权声明和许可证。\n3. 分发：允许，但需要遵守特定条件。\n4. 私有使用：允许。\n5. 专利授权：提供一定的专利保护。\n\n### 禁止的行为：\n1. 改变许可证条款：不允许修改许可证。\n2. 去除版权声明：不允许去除原始版权声明。\n\n### 评分及解释：\n\n**商业使用友好度: 5分 - 解释**\nECL v2.0 允许商业使用，没有任何限制。\n\n**修改代码自由度: 4分 - 解释**\n虽然允许修改代码，但需要保留原始版权声明和许可证，这稍微限制了自由度。\n\n**分发限制程度: 4分 - 解释**\n允许分发，但需要遵守特定条件，如保留版权声明和许可证，这带来了一些限制。\n\n**私有使用自由度: 5分 - 解释**\n完全允许私有使用，没有任何限制。\n\n**专利保护强度: 3分 - 解释**\n提供一定的专利保护，但范围有限，不如Apache许可证那样全面。\n\n**Copyleft强度: 2分 - 解释**\nECL v2.0 主要是一个非Copyleft许可证，只要求保留版权声明和许可证，不要求派生作品使用相同许可证。\n\n### JSON结构输出：\n\n\n\n这个JSON结构包含了每个方面的评分，便于快速理解和比较。",
+    "popular_projects": [
+      {
+        "name": "sakai",
+        "url": "https://github.com/sakaiproject/sakai",
+        "stars": 1071
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/ECL-2.0.html",
+    "summary": "ECL v2.0允许商业使用、修改和分发，需保留版权声明和许可证。禁止改许可证条款和去版权声明。专利保护有限，非Copyleft，适合教育机构。商业友好，私有使用自由，分发有条件限制。"
+  },
+  {
+    "name": "Eclipse Public License 1.0",
+    "keyword": "EPL-1.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 3,
+      "private": 5,
+      "patent": 3,
+      "copyleft": 3
+    },
+    "tldrlegal_analysis": "### 评分及解释\n\n**1. 商业使用友好度: 5分 - 解释**\nEclipse Public License 1.0 (EPL-1.0) 允许商业使用，没有任何限制。这使得它对商业项目非常友好。\n\n**2. 修改代码自由度: 5分 - 解释**\nEPL-1.0 允许用户自由修改代码，只要修改后的代码也遵循EPL-1.0许可证。\n\n**3. 分发限制程度: 3分 - 解释**\nEPL-1.0 允许分发，但要求分发时必须包含原始代码的许可证和版权声明，并且修改后的代码也必须遵循EPL-1.0。这些要求构成了一定的限制。\n\n**4. 私有使用自由度: 5分 - 解释**\nEPL-1.0 允许私有使用，没有任何限制。用户可以在不公开源代码的情况下使用和修改代码。\n\n**5. 专利保护强度: 3分 - 解释**\nEPL-1.0 提供了一些专利保护，但范围有限。它要求贡献者在贡献代码时授予使用其专利的权利，但这种保护并不像某些其他许可证那样全面。\n\n**6. Copyleft强度: 3分 - 解释**\nEPL-1.0 有一定的Copyleft要求，但不是强Copyleft。它要求修改后的代码必须遵循EPL-1.0，但允许与其他类型的代码混合使用。\n\n### JSON输出\n\n\n\n这个JSON结构包含了每个方面的评分，方便快速参考和理解Eclipse Public License 1.0的特点。",
+    "popular_projects": [
+      {
+        "name": "clojurescript",
+        "url": "https://github.com/clojure/clojurescript",
+        "stars": 9219
+      },
+      {
+        "name": "junit4",
+        "url": "https://github.com/junit-team/junit4",
+        "stars": 8521
+      },
+      {
+        "name": "AnyBar",
+        "url": "https://github.com/tonsky/AnyBar",
+        "stars": 5918
+      },
+      {
+        "name": "datascript",
+        "url": "https://github.com/tonsky/datascript",
+        "stars": 5467
+      },
+      {
+        "name": "riemann",
+        "url": "https://github.com/riemann/riemann",
+        "stars": 4227
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/EPL-1.0.html",
+    "summary": "EPL-1.0允许商业使用和自由修改代码，要求修改后代码也遵循EPL-1.0。分发时需包含许可证和版权声明。私有使用无限制，提供有限专利保护，具弱Copyleft特性，允许与其他代码混合。"
+  },
+  {
+    "name": "Eclipse Public License 2.0",
+    "keyword": "EPL-2.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": "",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Eclipse_Foundation_Logo.svg/220px-Eclipse_Foundation_Logo.svg.png",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 4,
+      "distribution": 4,
+      "private": 5,
+      "patent": 4,
+      "copyleft": 3
+    },
+    "tldrlegal_analysis": "### 分析Eclipse Public License 2.0\n\n#### 允许的行为：\n1. 商业使用：允许在商业项目中使用EPL 2.0许可的代码。\n2. 修改代码：允许修改代码，但修改后的代码必须以EPL 2.0发布。\n3. 分发：允许分发原始和修改后的代码，但必须遵守EPL 2.0的条款。\n4. 私有使用：允许在私有项目中使用，但如果有分发行为，必须遵守EPL 2.0的条款。\n5. 专利保护：提供了一定的专利保护，贡献者不能对使用其贡献的用户提出专利诉讼。\n\n#### 禁止的行为：\n1. 修改许可证：不允许将代码重新发布在不同于EPL 2.0的许可证下。\n2. 专利诉讼：如果用户对贡献者提起专利诉讼，专利保护条款将失效。\n\n### 评分及解释\n\n**1. 商业使用友好度: 5 - 解释**\nEPL 2.0允许在商业项目中使用其许可的代码，没有任何限制。\n\n**2. 修改代码自由度: 4 - 解释**\n虽然允许自由修改代码，但修改后的代码必须以EPL 2.0发布，这带来了一定的限制。\n\n**3. 分发限制程度: 4 - 解释**\n允许分发原始和修改后的代码，但必须遵守EPL 2.0的条款，如保留版权声明和许可证声明。\n\n**4. 私有使用自由度: 5 - 解释**\n完全允许在私有项目中使用，只要不进行分发，就没有额外的限制。\n\n**5. 专利保护强度: 4 - 解释**\n提供了一定的专利保护，但保护范围有限，主要是防止贡献者对用户提出专利诉讼。\n\n**6. Copyleft强度: 3 - 解释**\nEPL 2.0有一定的Copyleft要求，修改后的代码必须以EPL 2.0发布，但并不要求所有派生作品都必须使用相同许可证。\n\n### JSON输出",
+    "popular_projects": [
+      {
+        "name": "theia",
+        "url": "https://github.com/eclipse-theia/theia",
+        "stars": 19924
+      },
+      {
+        "name": "platform",
+        "url": "https://github.com/hcengineering/platform",
+        "stars": 7371
+      },
+      {
+        "name": "che",
+        "url": "https://github.com/eclipse-che/che",
+        "stars": 6969
+      },
+      {
+        "name": "win12",
+        "url": "https://github.com/tjy-gitnub/win12",
+        "stars": 6550
+      },
+      {
+        "name": "alda",
+        "url": "https://github.com/alda-lang/alda",
+        "stars": 5602
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/EPL-2.0.html",
+    "summary": "**Eclipse Public License 2.0 (EPL 2.0)** 允许商业使用、修改和分发代码，但修改后代码须以EPL 2.0发布。提供专利保护，禁止修改许可证和专利诉讼。适合商业和私有项目，但分发需遵守EPL 2.0条款。"
+  },
+  {
+    "name": "GNU Affero General Public License v3.0",
+    "keyword": "AGPL-3.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": "The GNU Affero General Public License (GNU AGPL) is a free, copyleft license published by the Free Software Foundation in November 2007, and based on the GNU GPL version 3 and the Affero General Public License (non-GNU).",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/AGPLv3_Logo.svg/200px-AGPLv3_Logo.svg.png",
+    "history": null,
+    "compatibility": {
+      "commercial": 3,
+      "modification": 5,
+      "distribution": 3,
+      "private": 3,
+      "patent": 5,
+      "copyleft": 5
+    },
+    "tldrlegal_analysis": "### GNU Affero General Public License v3.0 分析与评分\n\n#### 允许的行为：\n1. 商业使用\n2. 修改和分发代码\n3. 私有使用（但需遵守特定条件）\n4. 专利保护\n\n#### 禁止的行为：\n1. 对源代码的修改不公开\n2. 不遵守AGPLv3的条款进行分发\n\n#### 评分及解释：\n\n**1. 商业使用友好度: 3分 - 解释**\nAGPLv3允许商业使用，但要求任何通过网络提供服务的修改版也必须公开源代码，这对商业使用有一定限制。\n\n**2. 修改代码自由度: 5分 - 解释**\nAGPLv3允许自由修改代码，没有任何限制，只需遵守相同的许可证条款。\n\n**3. 分发限制程度: 3分 - 解释**\nAGPLv3允许分发，但要求分发时必须提供源代码，且对通过网络提供服务的修改版有特别要求，存在一定限制。\n\n**4. 私有使用自由度: 3分 - 解释**\nAGPLv3允许私有使用，但若通过网络提供服务，则必须公开源代码，这对私有使用有一定限制。\n\n**5. 专利保护强度: 5分 - 解释**\nAGPLv3包含强有力的专利保护条款，确保许可证持有者不会因专利问题受到限制。\n\n**6. Copyleft强度: 5分 - 解释**\nAGPLv3是强Copyleft许可证，要求所有派生作品都必须使用相同的许可证，且对通过网络提供服务的修改版有特别要求。\n\n### JSON 输出\n\n\n\n以上是对GNU Affero General Public License v3.0的详细分析与评分，希望对您有所帮助。",
+    "popular_projects": [
+      {
+        "name": "stable-diffusion-webui",
+        "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+        "stars": 140528
+      },
+      {
+        "name": "rustdesk",
+        "url": "https://github.com/rustdesk/rustdesk",
+        "stars": 73492
+      },
+      {
+        "name": "grafana",
+        "url": "https://github.com/grafana/grafana",
+        "stars": 64176
+      },
+      {
+        "name": "the-algorithm",
+        "url": "https://github.com/twitter/the-algorithm",
+        "stars": 62120
+      },
+      {
+        "name": "AppFlowy",
+        "url": "https://github.com/AppFlowy-IO/AppFlowy",
+        "stars": 56335
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/AGPL-3.0.html",
+    "summary": "GNU Affero General Public License v3.0（AGPLv3）允许商业使用、修改和分发代码，但要求公开所有修改的源代码，包括通过网络提供服务的版本。禁止不公开修改和不遵守条款的分发。强Copyleft，提供强专利保护，对私有和商业使用有一定限制。"
+  },
+  {
+    "name": "GNU General Public License v2.0 only",
+    "keyword": "GPL-2.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 3,
+      "private": 5,
+      "patent": 3,
+      "copyleft": 5
+    },
+    "tldrlegal_analysis": "### 评分分析\n\n**1. 商业使用友好度: 5 - 解释**\nGNU General Public License v2.0 (GPLv2) 允许商业使用，没有任何限制。用户可以自由地使用、修改和分发软件，包括在商业环境中。\n\n**2. 修改代码自由度: 5 - 解释**\nGPLv2 允许用户自由地修改代码，没有任何限制。只要分发修改后的代码时遵守GPLv2的条款即可。\n\n**3. 分发限制程度: 3 - 解释**\nGPLv2 允许分发，但要求分发时必须提供源代码，并且分发的内容也必须使用GPLv2许可证。这带来了一定的分发限制。\n\n**4. 私有使用自由度: 5 - 解释**\n私有使用（即不对外分发）的情况下，用户可以自由使用软件，没有任何限制。\n\n**5. 专利保护强度: 3 - 解释**\nGPLv2 提供了一些专利保护条款，但相对较弱。它要求贡献者在分发软件时不得对使用者施加专利限制，但保护范围有限。\n\n**6. Copyleft强度: 5 - 解释**\nGPLv2 是强Copyleft许可证，要求所有派生作品都必须使用相同的GPLv2许可证，确保自由软件的持续自由。\n\n### JSON输出",
+    "popular_projects": [
+      {
+        "name": "obs-studio",
+        "url": "https://github.com/obsproject/obs-studio",
+        "stars": 59125
+      },
+      {
+        "name": "trackerslist",
+        "url": "https://github.com/ngosang/trackerslist",
+        "stars": 46605
+      },
+      {
+        "name": "ImHex",
+        "url": "https://github.com/WerWolv/ImHex",
+        "stars": 43957
+      },
+      {
+        "name": "discourse",
+        "url": "https://github.com/discourse/discourse",
+        "stars": 41949
+      },
+      {
+        "name": "vue2-elm",
+        "url": "https://github.com/bailicangdu/vue2-elm",
+        "stars": 40947
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/GPL-2.0.html",
+    "summary": "**GNU General Public License v2.0 only (GPLv2)**\n允许商业使用和自由修改代码，但分发时需提供源代码并使用GPLv2。强Copyleft，派生作品也需GPLv2许可。私有使用无限制，专利保护较弱。"
+  },
+  {
+    "name": "GNU General Public License v3.0 only",
+    "keyword": "GPL-3.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": "",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/GPLv3_Logo.svg/220px-GPLv3_Logo.svg.png",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 3,
+      "private": 5,
+      "patent": 5,
+      "copyleft": 5
+    },
+    "tldrlegal_analysis": "### 方面评分及解释\n\n1. **商业使用友好度: 5分 - 解释**\n   - **解释**: GNU General Public License v3.0 (GPLv3) 允许商业使用，没有限制商业使用的行为，只要遵守许可证的其他条款。\n\n2. **修改代码自由度: 5分 - 解释**\n   - **解释**: GPLv3 允许用户自由修改代码，并且可以分发修改后的版本，只要分发时遵守相同的许可证条款。\n\n3. **分发限制程度: 3分 - 解释**\n   - **解释**: GPLv3 允许分发，但有严格的Copyleft要求，即分发时必须提供源代码，并且派生作品也必须使用GPLv3许可证。\n\n4. **私有使用自由度: 5分 - 解释**\n   - **解释**: GPLv3 允许私有使用，用户可以在不对外分发的情况下自由使用和修改代码。\n\n5. **专利保护强度: 5分 - 解释**\n   - **解释**: GPLv3 包含强有力的专利保护条款，旨在防止通过专利诉讼限制用户的使用权。\n\n6. **Copyleft强度: 5分 - 解释**\n   - **解释**: GPLv3 是强Copyleft许可证，要求所有派生作品都必须使用相同的GPLv3许可证，确保自由的传递。\n\n### JSON结构输出",
+    "popular_projects": [
+      {
+        "name": "free-programming-books-zh_CN",
+        "url": "https://github.com/justjavac/free-programming-books-zh_CN",
+        "stars": 111335
+      },
+      {
+        "name": "Microsoft-Activation-Scripts",
+        "url": "https://github.com/massgravel/Microsoft-Activation-Scripts",
+        "stars": 97368
+      },
+      {
+        "name": "netdata",
+        "url": "https://github.com/netdata/netdata",
+        "stars": 70918
+      },
+      {
+        "name": "v2rayN",
+        "url": "https://github.com/2dust/v2rayN",
+        "stars": 67625
+      },
+      {
+        "name": "gpt_academic",
+        "url": "https://github.com/binary-husky/gpt_academic",
+        "stars": 64435
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/GPL-3.0.html",
+    "summary": "**GPLv3仅版**：允许商业和私有使用，自由修改和分发代码，但需遵守强Copyleft，分发时提供源码，派生作品同需GPLv3。含强专利保护，确保自由使用不受专利限制。"
+  },
+  {
+    "name": "GNU Lesser General Public License v2.1 only",
+    "keyword": "LGPL-2.1",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 4,
+      "private": 5,
+      "patent": 3,
+      "copyleft": 3
+    },
+    "tldrlegal_analysis": "### 评分分析\n\n#### 1. 商业使用友好度\n**分数: 5 - 解释**\nGNU Lesser General Public License v2.1 (LGPL v2.1) 允许商业使用，只要遵守其条款，如保留版权声明和提供源代码。因此，它对商业使用非常友好。\n\n#### 2. 修改代码自由度\n**分数: 5 - 解释**\nLGPL v2.1 允许自由修改代码，只要修改后的代码也遵循 LGPL v2.1 许可证，并保留原始版权声明。\n\n#### 3. 分发限制程度\n**分数: 4 - 解释**\nLGPL v2.1 允许分发修改后的代码，但要求提供相应的源代码或提供获取源代码的途径。虽然有一些限制，但这些限制是为了确保开源精神的延续，因此分发限制相对较小。\n\n#### 4. 私有使用自由度\n**分数: 5 - 解释**\nLGPL v2.1 允许私有使用，即使是商业环境下的私有使用，只要不对外分发修改后的代码，私有使用几乎没有限制。\n\n#### 5. 专利保护强度\n**分数: 3 - 解释**\nLGPL v2.1 提供了一些专利保护条款，但相对于其他专门的专利保护许可证（如 Apache 2.0），其专利保护范围和强度有限。\n\n#### 6. Copyleft强度\n**分数: 3 - 解释**\nLGPL v2.1 是一种弱Copyleft许可证，要求对修改后的代码保留 LGPL v2.1 许可证，但对使用该代码的其他软件没有强制要求使用 LGPL v2.1，因此其Copyleft强度相对较弱。\n\n### JSON 结构输出",
+    "popular_projects": [
+      {
+        "name": "gfwlist",
+        "url": "https://github.com/gfwlist/gfwlist",
+        "stars": 23271
+      },
+      {
+        "name": "p5.js",
+        "url": "https://github.com/processing/p5.js",
+        "stars": 21519
+      },
+      {
+        "name": "PHPMailer",
+        "url": "https://github.com/PHPMailer/PHPMailer",
+        "stars": 20960
+      },
+      {
+        "name": "cli",
+        "url": "https://github.com/spicetify/cli",
+        "stars": 18304
+      },
+      {
+        "name": "browsh",
+        "url": "https://github.com/browsh-org/browsh",
+        "stars": 16967
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/LGPL-2.1.html",
+    "summary": "**GNU Lesser General Public License v2.1 only (LGPL v2.1)**\n\n允许商业使用和自由修改代码，需保留版权声明并公开修改后源代码。弱Copyleft，对使用该代码的其他软件无强制许可要求。提供有限专利保护，私有使用几乎无限制。"
+  },
+  {
+    "name": "GNU Lesser General Public License v3.0 only",
+    "keyword": "LGPL-3.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 4,
+      "private": 5,
+      "patent": 4,
+      "copyleft": 3
+    },
+    "tldrlegal_analysis": "### 评分分析\n\n#### 1. 商业使用友好度\n**分数: 5 - 解释:**  \nGNU Lesser General Public License v3.0 (LGPLv3) 允许商业使用，没有限制。用户可以自由地将基于LGPLv3许可的软件用于商业目的。\n\n#### 2. 修改代码自由度\n**分数: 5 - 解释:**  \nLGPLv3 允许用户自由修改代码。只要修改后的代码仍然遵守LGPLv3的条款，用户可以自由地进行修改和分发。\n\n#### 3. 分发限制程度\n**分数: 4 - 解释:**  \nLGPLv3 允许分发，但有一定的限制。特别是，如果修改后的代码以二进制形式分发，必须提供相应的源代码或提供获取源代码的方式。这比完全无限制的分发稍显严格，但总体上限制较小。\n\n#### 4. 私有使用自由度\n**分数: 5 - 解释:**  \nLGPLv3 允许私有使用，没有限制。用户可以在不公开源代码的情况下，自由地在内部使用基于LGPLv3许可的软件。\n\n#### 5. 专利保护强度\n**分数: 4 - 解释:**  \nLGPLv3 包含了一些专利保护条款，但相对于GPLv3，其专利保护强度稍弱。它确实提供了一定的专利保护，但不如GPLv3那样全面。\n\n#### 6. Copyleft强度\n**分数: 3 - 解释:**  \nLGPLv3 是一种弱Copyleft许可证。它要求修改后的代码在分发时必须遵守LGPLv3，但允许与闭源软件链接。相对于GPLv3的强Copyleft，LGPLv3的要求较为宽松。\n\n### JSON结构输出\n\n\n\n这个JSON结构包含了各个方面的评分，反映了GNU Lesser General Public License v3.0 only许可证在不同维度的特性。",
+    "popular_projects": [
+      {
+        "name": "go-ethereum",
+        "url": "https://github.com/ethereum/go-ethereum",
+        "stars": 47286
+      },
+      {
+        "name": "radare2",
+        "url": "https://github.com/radareorg/radare2",
+        "stars": 20438
+      },
+      {
+        "name": "wkhtmltopdf",
+        "url": "https://github.com/wkhtmltopdf/wkhtmltopdf",
+        "stars": 13954
+      },
+      {
+        "name": "abp",
+        "url": "https://github.com/abpframework/abp",
+        "stars": 12804
+      },
+      {
+        "name": "pan-light",
+        "url": "https://github.com/peterq/pan-light",
+        "stars": 12081
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/LGPL-3.0.html",
+    "summary": "**GNU Lesser General Public License v3.0 (LGPLv3)** 允许商业使用和自由修改代码，分发需提供源代码或获取方式。支持私有使用，含专利保护但强度较弱。弱Copyleft，允许与闭源软件链接。适用于需灵活性与开源保护的软件项目。"
+  },
+  {
+    "name": "ISC License",
+    "keyword": "ISC",
+    "spdx_description": "No description available",
+    "wikipedia_intro": "",
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 5,
+      "private": 5,
+      "patent": 1,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "### ISC License 分析与评分\n\n#### 允许的行为：\n- 商业使用\n- 修改代码\n- 分发原始和修改后的代码\n- 私有使用\n\n#### 禁止的行为：\n- 删除或修改版权声明和许可证声明\n\n#### 评分及解释：\n\n1. **商业使用友好度**: 5分 - ISC许可证允许无限制的商业使用，没有任何限制。\n\n2. **修改代码自由度**: 5分 - 允许自由修改代码，只需保留原始版权和许可证声明。\n\n3. **分发限制程度**: 5分 - 几乎没有分发限制，允许自由分发原始和修改后的代码，只需保留版权和许可证声明。\n\n4. **私有使用自由度**: 5分 - 完全允许自由的私有使用，没有任何限制。\n\n5. **专利保护强度**: 1分 - ISC许可证没有明确的专利保护条款。\n\n6. **Copyleft强度**: 1分 - ISC许可证没有Copyleft条款，允许在其它许可证下分发修改后的代码。\n\n### JSON 结构输出",
+    "popular_projects": [
+      {
+        "name": "d3",
+        "url": "https://github.com/d3/d3",
+        "stars": 108525
+      },
+      {
+        "name": "starship",
+        "url": "https://github.com/starship/starship",
+        "stars": 44441
+      },
+      {
+        "name": "next-auth",
+        "url": "https://github.com/nextauthjs/next-auth",
+        "stars": 24321
+      },
+      {
+        "name": "gpt-crawler",
+        "url": "https://github.com/BuilderIO/gpt-crawler",
+        "stars": 18589
+      },
+      {
+        "name": "cosmopolitan",
+        "url": "https://github.com/jart/cosmopolitan",
+        "stars": 17907
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/ISC.html",
+    "summary": "**ISC许可证摘要**：允许商业使用、修改、分发（需保留版权和许可证声明）；禁止删除或修改声明。无专利保护和Copyleft限制，高度自由，适合商业和私有使用。"
+  },
+  {
+    "name": "LaTeX Project Public License v1.3c",
+    "keyword": "LPPL-1.3c",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 4,
+      "distribution": 4,
+      "private": 5,
+      "patent": 3,
+      "copyleft": 3
+    },
+    "tldrlegal_analysis": "### LaTeX Project Public License v1.3c 评分分析\n\n#### 1. 商业使用友好度\n**评分: 5 - 解释:** LPPL v1.3c 允许商业使用，没有对商业使用设置特别的限制。\n\n#### 2. 修改代码自由度\n**评分: 4 - 解释:** LPPL v1.3c 允许修改代码，但要求修改后的版本必须明确标识，并且不能使用原名称，这有一定的限制但不算严格。\n\n#### 3. 分发限制程度\n**评分: 4 - 解释:** LPPL v1.3c 允许分发，但要求分发时必须包含许可证文本和版权声明，这有一些限制但不严重。\n\n#### 4. 私有使用自由度\n**评分: 5 - 解释:** LPPL v1.3c 允许私有使用，没有对私有使用设置特别的限制。\n\n#### 5. 专利保护强度\n**评分: 3 - 解释:** LPPL v1.3c 提供了一些基本的专利保护，但不如一些专门的专利保护许可证（如Apache 2.0）强。\n\n#### 6. Copyleft强度\n**评分: 3 - 解释:** LPPL v1.3c 有一定的Copyleft要求，要求修改后的版本必须使用相同的许可证，但不如GPL那样严格。\n\n### JSON输出\n\n\n这个JSON结构包含了每个方面的评分，方便快速查阅和理解。",
+    "popular_projects": [
+      {
+        "name": "Awesome-CV",
+        "url": "https://github.com/posquit0/Awesome-CV",
+        "stars": 22906
+      },
+      {
+        "name": "thuthesis",
+        "url": "https://github.com/tuna/thuthesis",
+        "stars": 4537
+      },
+      {
+        "name": "ElegantBook",
+        "url": "https://github.com/ElegantLaTeX/ElegantBook",
+        "stars": 2025
+      },
+      {
+        "name": "latex3",
+        "url": "https://github.com/latex3/latex3",
+        "stars": 1902
+      },
+      {
+        "name": "latex2e",
+        "url": "https://github.com/latex3/latex2e",
+        "stars": 1891
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/LPPL-1.3c.html",
+    "summary": "LaTeX Project Public License v1.3c允许商业和私有使用，可修改代码但需明确标识且不能用原名称，分发时需包含许可证和版权声明。提供基本专利保护，有一定Copyleft要求但不严格。总体较为宽松，适合需标识修改的开源项目。"
+  },
+  {
+    "name": "Microsoft Public License",
+    "keyword": "MS-PL",
+    "spdx_description": "No description available",
+    "wikipedia_intro": "The Shared Source Initiative (SSI) is a source-available software licensing scheme launched by Microsoft in May 2001.[1] The program includes a spectrum of technologies and licenses, and most of its source code offerings are available for download after eligibility criteria are met.[2]",
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 4,
+      "private": 5,
+      "patent": 3,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "首先，我们需要了解Microsoft Public License (MS-PL) 的具体条款，以便准确评分。\n\n### Microsoft Public License (MS-PL) 概述\n\n**允许的行为：**\n1. 商业使用：允许在商业产品中使用。\n2. 修改代码：允许修改和派生作品。\n3. 分发：允许分发原始和修改后的代码。\n4. 私有使用：允许私有使用。\n\n**禁止的行为：**\n1. 专利诉讼：如果提起专利诉讼，专利权将终止。\n2. 使用商标：不允许使用微软的商标。\n\n### 评分及解释\n\n1. **商业使用友好度: 5分 - 解释**\n   - MS-PL 允许在商业产品中使用，没有任何限制。\n\n2. **修改代码自由度: 5分 - 解释**\n   - MS-PL 允许自由修改代码，并创建派生作品。\n\n3. **分发限制程度: 4分 - 解释**\n   - 虽然允许分发，但要求分发时必须包含许可证文本，这带来了一点限制。\n\n4. **私有使用自由度: 5分 - 解释**\n   - MS-PL 完全允许私有使用，没有任何限制。\n\n5. **专利保护强度: 3分 - 解释**\n   - MS-PL 提供了一些专利保护，但如果提起专利诉讼，专利权将终止，保护范围有限。\n\n6. **Copyleft强度: 1分 - 解释**\n   - MS-PL 是一种弱Copyleft许可证，不要求派生作品必须使用相同许可证。\n\n### JSON 结构输出\n\n\n\n这个JSON结构包含了各个方面根据Microsoft Public License (MS-PL) 的评分。",
+    "popular_projects": [
+      {
+        "name": "ScreenToGif",
+        "url": "https://github.com/NickeManarin/ScreenToGif",
+        "stars": 23596
+      },
+      {
+        "name": "Windows-driver-samples",
+        "url": "https://github.com/microsoft/Windows-driver-samples",
+        "stars": 6910
+      },
+      {
+        "name": "sharpkeys",
+        "url": "https://github.com/randyrants/sharpkeys",
+        "stars": 6080
+      },
+      {
+        "name": "carnac",
+        "url": "https://github.com/Code52/carnac",
+        "stars": 4146
+      },
+      {
+        "name": "MvvmCross",
+        "url": "https://github.com/MvvmCross/MvvmCross",
+        "stars": 3865
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/MS-PL.html",
+    "summary": "Microsoft Public License (MS-PL) 允许商业使用、修改和分发代码，支持私有使用，但禁止专利诉讼和使用微软商标。弱Copyleft，不要求派生作品同许可证。分发需含许可证文本。专利保护有限。"
+  },
+  {
+    "name": "MIT License",
+    "keyword": "MIT",
+    "spdx_description": "No description available",
+    "wikipedia_intro": "",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/100px-MIT_logo.svg.png",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 5,
+      "private": 5,
+      "patent": 1,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "### MIT License 分析与评分\n\n#### 允许的行为：\n- 商业使用\n- 修改代码\n- 分发原始和修改后的代码\n- 私有使用\n\n#### 禁止的行为：\n- 删除原始版权声明和许可证声明\n\n### 评分与解释\n\n1. **商业使用友好度**: 5分 - MIT License 允许无限制的商业使用，没有任何限制条件。\n\n2. **修改代码自由度**: 5分 - 允许自由修改代码，没有任何限制。\n\n3. **分发限制程度**: 5分 - 几乎没有分发限制，只需保留原始版权声明和许可证声明。\n\n4. **私有使用自由度**: 5分 - 完全允许自由的私有使用，没有任何限制。\n\n5. **专利保护强度**: 1分 - MIT License 没有明确的专利保护条款。\n\n6. **Copyleft强度**: 1分 - MIT License 是一种宽松的许可证，没有Copyleft要求，不强制派生作品使用相同许可证。\n\n### JSON 输出",
+    "popular_projects": [
+      {
+        "name": "public-apis",
+        "url": "https://github.com/public-apis/public-apis",
+        "stars": 313388
+      },
+      {
+        "name": "react",
+        "url": "https://github.com/facebook/react",
+        "stars": 227933
+      },
+      {
+        "name": "vue",
+        "url": "https://github.com/vuejs/vue",
+        "stars": 207744
+      },
+      {
+        "name": "project-based-learning",
+        "url": "https://github.com/practical-tutorials/project-based-learning",
+        "stars": 199043
+      },
+      {
+        "name": "javascript-algorithms",
+        "url": "https://github.com/trekhleb/javascript-algorithms",
+        "stars": 187594
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/MIT.html",
+    "summary": "**MIT License摘要**：允许商业使用、修改、分发及私有使用，仅需保留原始版权和许可证声明。无专利保护和Copyleft要求，极度宽松，适合广泛项目。"
+  },
+  {
+    "name": "Mozilla Public License 2.0",
+    "keyword": "MPL-2.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": "",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Mozilla_logo.svg/200px-Mozilla_logo.svg.png",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 3,
+      "private": 5,
+      "patent": 4,
+      "copyleft": 3
+    },
+    "tldrlegal_analysis": "### Mozilla Public License 2.0 (MPL 2.0) 分析\n\n#### 允许的行为：\n1. 商业使用\n2. 修改代码\n3. 分发原始和修改后的代码\n4. 私有使用\n5. 专利授权\n\n#### 禁止的行为：\n1. 对修改后的代码进行闭源分发，除非修改部分以不同的文件形式存在\n2. 否认或限制原始作者的版权声明\n3. 使用商标或服务标志进行误导性宣传\n\n### 评分及解释：\n\n1. **商业使用友好度: 5分 - MPL 2.0 允许商业使用，没有限制。**\n2. **修改代码自由度: 5分 - MPL 2.0 允许自由修改代码，只需保留修改部分的开放性。**\n3. **分发限制程度: 3分 - 允许分发，但修改后的代码必须以不同的文件形式存在，且这些文件必须遵守MPL 2.0。**\n4. **私有使用自由度: 5分 - MPL 2.0 允许自由的私有使用，没有限制。**\n5. **专利保护强度: 4分 - MPL 2.0 提供了较强的专利保护，但不如一些强专利保护许可证（如Apache 2.0）。**\n6. **Copyleft强度: 3分 - MPL 2.0 是弱Copyleft，只要求修改部分的文件保持开放，其他部分可以闭源。**\n\n### JSON 输出：\n\n\n\n这个JSON结构包含了每个方面的评分，反映了MPL 2.0在不同维度的特性。",
+    "popular_projects": [
+      {
+        "name": "syncthing",
+        "url": "https://github.com/syncthing/syncthing",
+        "stars": 64250
+      },
+      {
+        "name": "devdocs",
+        "url": "https://github.com/freeCodeCamp/devdocs",
+        "stars": 35069
+      },
+      {
+        "name": "TTS",
+        "url": "https://github.com/coqui-ai/TTS",
+        "stars": 34051
+      },
+      {
+        "name": "helix",
+        "url": "https://github.com/helix-editor/helix",
+        "stars": 33086
+      },
+      {
+        "name": "penpot",
+        "url": "https://github.com/penpot/penpot",
+        "stars": 32856
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/MPL-2.0.html",
+    "summary": "**MPL 2.0 许可证摘要：**\n\n允许商业使用、修改和分发代码，私有使用自由。禁止闭源分发修改部分（除非独立文件）。需保留版权声明，禁止误导性商标使用。弱Copyleft，仅修改文件需开源，其他可闭源。提供较强专利保护。"
+  },
+  {
+    "name": "Open Software License 3.0",
+    "keyword": "OSL-3.0",
+    "spdx_description": "No description available",
+    "wikipedia_intro": "",
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 3,
+      "private": 5,
+      "patent": 4,
+      "copyleft": 4
+    },
+    "tldrlegal_analysis": "### Open Software License 3.0 分析及评分\n\n#### 允许的行为：\n- 商业使用\n- 修改代码\n- 分发原始和修改后的代码\n- 私有使用\n\n#### 禁止的行为：\n- 对原始代码或修改后的代码施加额外的限制\n- 将代码用于违反法律或道德的行为\n\n#### 评分及解释：\n\n1. **商业使用友好度: 5分 - 解释**\n   - OSL 3.0 允许商业使用，没有任何限制，因此商业使用友好度非常高。\n\n2. **修改代码自由度: 5分 - 解释**\n   - OSL 3.0 允许用户自由修改代码，只要分发时遵守许可证的要求。\n\n3. **分发限制程度: 3分 - 解释**\n   - 虽然允许分发原始和修改后的代码，但必须遵守特定的条件，如保留版权声明和许可证文本，因此有一定的限制。\n\n4. **私有使用自由度: 5分 - 解释**\n   - OSL 3.0 允许私有使用，没有任何限制。\n\n5. **专利保护强度: 4分 - 解释**\n   - OSL 3.0 提供了专利保护条款，但相对于一些专门的专利保护许可证（如Apache 2.0），其保护力度稍弱。\n\n6. **Copyleft强度: 4分 - 解释**\n   - OSL 3.0 是一个Copyleft许可证，要求所有派生作品都必须使用相同许可证，但其Copyleft强度略低于GPL。\n\n### JSON 结构输出\n\n\n\n这个JSON结构包含了各个方面的评分，便于快速理解和比较。",
+    "popular_projects": [
+      {
+        "name": "bagisto",
+        "url": "https://github.com/bagisto/bagisto",
+        "stars": 14664
+      },
+      {
+        "name": "magento2",
+        "url": "https://github.com/magento/magento2",
+        "stars": 11489
+      },
+      {
+        "name": "laravel-crm",
+        "url": "https://github.com/krayin/laravel-crm",
+        "stars": 10663
+      },
+      {
+        "name": "lkmpg",
+        "url": "https://github.com/sysprog21/lkmpg",
+        "stars": 7550
+      },
+      {
+        "name": "QloApps",
+        "url": "https://github.com/Qloapps/QloApps",
+        "stars": 4512
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/OSL-3.0.html",
+    "summary": "Open Software License 3.0（OSL 3.0）允许商业使用、修改和分发代码，禁止施加额外限制。提供专利保护，但力度中等。Copyleft要求派生作品同许可，但强度低于GPL。私有使用无限制。分发需保留版权和许可证文本。"
+  },
+  {
+    "name": "PostgreSQL License",
+    "keyword": "PostgreSQL",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 5,
+      "private": 5,
+      "patent": 3,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "首先，我们需要了解PostgreSQL License的具体内容。PostgreSQL License是一种相对宽松的开源许可证，通常被认为是对商业友好的。以下是该许可证的一些关键点：\n\n### 允许的行为：\n1. **商业使用**：允许在商业产品中使用PostgreSQL。\n2. **修改代码**：允许修改和分发修改后的代码。\n3. **分发**：允许自由分发原始和修改后的代码。\n4. **私有使用**：允许在私有项目中使用PostgreSQL。\n\n### 禁止的行为：\n1. **去除版权声明**：分发时必须保留原始版权声明和许可证信息。\n2. **专利诉讼**：如果对PostgreSQL的贡献者提起专利诉讼，专利权可能会被撤销。\n\n基于这些信息，我们可以为各个方面评分：\n\n1. **商业使用友好度**: 5分 - PostgreSQL License完全允许商业使用，没有限制。\n2. **修改代码自由度**: 5分 - 允许自由修改代码，只需保留版权声明。\n3. **分发限制程度**: 5分 - 几乎没有分发限制，只需保留版权声明。\n4. **私有使用自由度**: 5分 - 完全允许自由的私有使用。\n5. **专利保护强度**: 3分 - 有一些专利保护条款，但范围有限，主要是针对提起专利诉讼的情况。\n6. **Copyleft强度**: 1分 - PostgreSQL License没有Copyleft条款，允许与不同许可证的软件结合。\n\n### JSON输出\n\n\n### 详细解释\n- **商业使用友好度**: 5分 - 许可证明确允许商业使用，没有任何限制。\n- **修改代码自由度**: 5分 - 用户可以自由修改代码，只需保留原始版权声明。\n- **分发限制程度**: 5分 - 分发几乎没有限制，只需保留版权声明和许可证信息。\n- **私有使用自由度**: 5分 - 许可证允许在私有项目中自由使用。\n- **专利保护强度**: 3分 - 提供了一些专利保护，但主要是针对提起专利诉讼的情况，范围有限。\n- **Copyleft强度**: 1分 - 许可证没有Copyleft要求，允许与其他不同许可证的软件结合使用。\n\n希望这些评分和解释对你有帮助！",
+    "popular_projects": [
+      {
+        "name": "pgbadger",
+        "url": "https://github.com/darold/pgbadger",
+        "stars": 3521
+      },
+      {
+        "name": "npgsql",
+        "url": "https://github.com/npgsql/npgsql",
+        "stars": 3282
+      },
+      {
+        "name": "pg_cron",
+        "url": "https://github.com/citusdata/pg_cron",
+        "stars": 2815
+      },
+      {
+        "name": "pev2",
+        "url": "https://github.com/dalibo/pev2",
+        "stars": 2581
+      },
+      {
+        "name": "pgmq",
+        "url": "https://github.com/tembo-io/pgmq",
+        "stars": 2553
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/PostgreSQL.html",
+    "summary": "PostgreSQL License是一种宽松、商业友好的开源许可证，允许商业使用、修改、分发及私有使用，但需保留版权声明。禁止去除版权信息，对专利诉讼有限制。无Copyleft条款，可与不同许可证软件结合。专利保护较弱。"
+  },
+  {
+    "name": "SIL Open Font License 1.1",
+    "keyword": "OFL-1.1",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 4,
+      "distribution": 5,
+      "private": 5,
+      "patent": 3,
+      "copyleft": 3
+    },
+    "tldrlegal_analysis": "首先，我们需要了解SIL Open Font License 1.1 (OFL) 的主要条款：\n\n### 允许的行为：\n1. **商业使用**：允许在商业产品中使用字体。\n2. **修改**：允许修改字体文件，但修改后的版本必须使用相同的许可证。\n3. **分发**：允许自由分发原始或修改后的字体文件。\n4. **私有使用**：允许在私有项目中使用字体。\n\n### 禁止的行为：\n1. **商标使用**：不允许使用字体名称作为商标。\n2. **单独销售**：不允许将字体单独作为产品销售。\n3. **专利限制**：如果有专利权，必须明确声明。\n\n基于这些信息，我们可以为各个方面评分：\n\n1. **商业使用友好度**: 5分 - 解释：OFL允许在商业产品中使用字体，没有任何限制。\n2. **修改代码自由度**: 4分 - 解释：允许自由修改，但要求修改后的版本使用相同的许可证，这稍微限制了自由度。\n3. **分发限制程度**: 5分 - 解释：几乎没有分发限制，允许自由分发原始或修改后的字体文件。\n4. **私有使用自由度**: 5分 - 解释：完全允许在私有项目中使用字体，没有任何限制。\n5. **专利保护强度**: 3分 - 解释：有一些专利保护条款，但范围有限，主要依赖于声明。\n6. **Copyleft强度**: 3分 - 解释：有一定的Copyleft要求，要求修改后的版本使用相同许可证，但不如GPL那样严格。\n\n### JSON输出：\n\n\n这个JSON结构包含了各个方面的评分，符合题目要求。",
+    "popular_projects": [
+      {
+        "name": "FiraCode",
+        "url": "https://github.com/tonsky/FiraCode",
+        "stars": 76879
+      },
+      {
+        "name": "source-code-pro",
+        "url": "https://github.com/adobe-fonts/source-code-pro",
+        "stars": 19849
+      },
+      {
+        "name": "Iosevka",
+        "url": "https://github.com/be5invis/Iosevka",
+        "stars": 19092
+      },
+      {
+        "name": "LxgwWenKai",
+        "url": "https://github.com/lxgw/LxgwWenKai",
+        "stars": 17659
+      },
+      {
+        "name": "inter",
+        "url": "https://github.com/rsms/inter",
+        "stars": 17636
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/OFL-1.1.html",
+    "summary": "SIL Open Font License 1.1允许商业使用、修改和自由分发字体，但修改版需同许可证，禁用字体名作商标和单独销售，专利需声明。商业友好，修改自由度较高，分发和私有使用无限制，专利保护较弱，Copyleft适中。"
+  },
+  {
+    "name": "University of Illinois/NCSA Open Source License",
+    "keyword": "NCSA",
+    "spdx_description": "No description available",
+    "wikipedia_intro": "The University of Illinois/NCSA Open Source License, or UIUC license, is a permissive free software license, based on the MIT/X11 license and the 3-clause BSD license. By combining parts of these two licenses, it attempts to be clearer and more concise than either.[3]",
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 4,
+      "private": 5,
+      "patent": 1,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "首先，我们需要了解 \"University of Illinois/NCSA Open Source License\" 的具体条款。该许可证是一种较为宽松的开源许可证，类似于MIT许可证，但有一些特定的要求。\n\n### 允许的行为：\n1. 商业使用\n2. 修改代码\n3. 分发原始和修改后的代码\n4. 私有使用\n\n### 禁止的行为：\n1. 删除或修改版权声明和许可证声明\n2. 使用原作者的名誉进行背书\n\n基于以上信息，我们可以对各个方面进行评分：\n\n1. **商业使用友好度**: 5分 - 该许可证允许无限制的商业使用，没有任何特定的限制。\n\n2. **修改代码自由度**: 5分 - 允许自由修改代码，只要保留版权和许可证声明。\n\n3. **分发限制程度**: 4分 - 允许自由分发，但要求保留版权和许可证声明，这一点略微限制了分发的自由度。\n\n4. **私有使用自由度**: 5分 - 完全允许私有使用，没有任何限制。\n\n5. **专利保护强度**: 1分 - 该许可证没有明确的专利保护条款。\n\n6. **Copyleft强度**: 1分 - 该许可证没有Copyleft条款，允许在闭源项目中使用。\n\n### JSON输出\n\n\n### 解释\n- **商业使用友好度**: 5分 - 完全允许商业使用，没有任何限制。\n- **修改代码自由度**: 5分 - 允许自由修改代码，只需保留版权和许可证声明。\n- **分发限制程度**: 4分 - 允许自由分发，但有保留版权和许可证声明的义务。\n- **私有使用自由度**: 5分 - 完全允许私有使用，没有任何限制。\n- **专利保护强度**: 1分 - 没有明确的专利保护条款。\n- **Copyleft强度**: 1分 - 没有Copyleft条款，允许在闭源项目中使用。",
+    "popular_projects": [
+      {
+        "name": "toaruos",
+        "url": "https://github.com/klange/toaruos",
+        "stars": 6091
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/NCSA.html",
+    "summary": "UIUC许可证是一种宽松开源许可证，允许商业使用、修改和分发代码，以及私有使用。需保留版权和许可证声明，禁止使用原作者名誉背书。无专利保护和Copyleft条款，适合商业和闭源项目使用。"
+  },
+  {
+    "name": "The Unlicense",
+    "keyword": "Unlicense",
+    "spdx_description": "No description available",
+    "wikipedia_intro": null,
+    "logo": "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 5,
+      "private": 5,
+      "patent": 1,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "### The Unlicense 评分分析\n\n#### 允许的行为：\n- 商业使用\n- 修改代码\n- 分发代码\n- 私有使用\n\n#### 禁止的行为：\n- 无特定禁止行为，但放弃所有版权和专利权\n\n### 评分及解释\n\n**商业使用友好度: 5 - 解释**\nThe Unlicense 允许无限制的商业使用，没有任何特定的限制条件。\n\n**修改代码自由度: 5 - 解释**\nThe Unlicense 允许自由修改代码，没有任何限制。\n\n**分发限制程度: 5 - 解释**\nThe Unlicense 允许自由分发代码，没有任何限制。\n\n**私有使用自由度: 5 - 解释**\nThe Unlicense 允许无限制的私有使用，没有任何限制。\n\n**专利保护强度: 1 - 解释**\nThe Unlicense 放弃了所有专利权，没有提供任何专利保护。\n\n**Copyleft强度: 1 - 解释**\nThe Unlicense 没有任何Copyleft条款，不要求派生作品使用相同许可证。\n\n### JSON 输出",
+    "popular_projects": [
+      {
+        "name": "youtube-dl",
+        "url": "https://github.com/ytdl-org/youtube-dl",
+        "stars": 131613
+      },
+      {
+        "name": "iptv",
+        "url": "https://github.com/iptv-org/iptv",
+        "stars": 84825
+      },
+      {
+        "name": "yt-dlp",
+        "url": "https://github.com/yt-dlp/yt-dlp",
+        "stars": 83738
+      },
+      {
+        "name": "HowToCook",
+        "url": "https://github.com/Anduin2017/HowToCook",
+        "stars": 66612
+      },
+      {
+        "name": "ripgrep",
+        "url": "https://github.com/BurntSushi/ripgrep",
+        "stars": 47914
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/Unlicense.html",
+    "summary": "**The Unlicense摘要**：允许商业使用、修改、分发和私有使用，无特定禁止行为，但放弃所有版权和专利权。无Copyleft条款，不提供专利保护，完全自由开放。"
+  },
+  {
+    "name": "zlib License",
+    "keyword": "Zlib",
+    "spdx_description": "No description available",
+    "wikipedia_intro": "",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zlib_3D_green.svg/100px-Zlib_3D_green.svg.png",
+    "history": null,
+    "compatibility": {
+      "commercial": 5,
+      "modification": 5,
+      "distribution": 5,
+      "private": 5,
+      "patent": 1,
+      "copyleft": 1
+    },
+    "tldrlegal_analysis": "首先，我们需要了解zlib License的具体内容。zlib License是一种非常宽松的开源许可证，其主要特点如下：\n\n### 允许的行为：\n1. **商业使用**：允许在商业项目中使用。\n2. **修改代码**：允许修改和衍生代码。\n3. **分发**：允许分发原始代码和修改后的代码。\n4. **私有使用**：允许在私有项目中使用。\n\n### 禁止的行为：\n1. **误导性声明**：禁止在分发时声称未修改的代码是由你编写的。\n\n基于以上信息，我们可以对各个方面进行评分：\n\n1. **商业使用友好度**:\n   - **5分** - zlib License完全允许商业使用，没有任何限制。\n\n2. **修改代码自由度**:\n   - **5分** - 允许自由修改代码，没有任何限制。\n\n3. **分发限制程度**:\n   - **5分** - 几乎没有分发限制，只需保留原始版权声明和免责声明。\n\n4. **私有使用自由度**:\n   - **5分** - 完全允许自由的私有使用。\n\n5. **专利保护强度**:\n   - **1分** - zlib License没有明确的专利保护条款。\n\n6. **Copyleft强度**:\n   - **1分** - zlib License没有Copyleft条款，允许与其他许可证混合使用。\n\n### JSON输出\n\n\n### 解释\n- **商业使用友好度**: 5分 - zlib License对商业使用没有任何限制。\n- **修改代码自由度**: 5分 - 允许自由修改代码。\n- **分发限制程度**: 5分 - 分发几乎没有限制，只需保留必要的声明。\n- **私有使用自由度**: 5分 - 完全允许私有使用。\n- **专利保护强度**: 1分 - 没有明确的专利保护条款。\n- **Copyleft强度**: 1分 - 没有Copyleft要求，允许与其他许可证混合使用。\n\n这个评分和解释基于zlib License的宽松特性，确保了其在商业和开发中的高度灵活性。",
+    "popular_projects": [
+      {
+        "name": "portainer",
+        "url": "https://github.com/portainer/portainer",
+        "stars": 30576
+      },
+      {
+        "name": "raylib",
+        "url": "https://github.com/raysan5/raylib",
+        "stars": 21878
+      },
+      {
+        "name": "dxvk",
+        "url": "https://github.com/doitsujin/dxvk",
+        "stars": 12946
+      },
+      {
+        "name": "glfw",
+        "url": "https://github.com/glfw/glfw",
+        "stars": 12909
+      },
+      {
+        "name": "SFML",
+        "url": "https://github.com/SFML/SFML",
+        "stars": 10070
+      }
+    ],
+    "full_text_url": "https://spdx.org/licenses/Zlib.html",
+    "summary": "zlib License是一种宽松开源许可证，允许商业使用、修改、分发和私有使用，禁止误导性声明。无专利保护和Copyleft条款，高度灵活，适合商业和开发。只需保留原始版权和免责声明。"
+  }
+]

@@ -95,7 +95,15 @@ const LicenseExplorer: React.FC = () => {
         开源许可证探索器
       </Typography>
 
-      <Box sx={{ display: 'flex', gap: 2, mb: 4 }}>
+      <Box
+        sx={{
+          display: 'flex',
+          gap: 2,
+          mb: 4,
+          flexWrap: 'nowrap', // 防止换行
+          alignItems: 'center', // 垂直居中对齐按钮
+        }}
+      >
         <TextField
           fullWidth
           variant="outlined"
@@ -106,15 +114,25 @@ const LicenseExplorer: React.FC = () => {
             startAdornment: <Search size={20} />,
           }}
         />
-        <Button variant="contained" startIcon={<Filter />}>
+        <Button
+          variant="contained"
+          startIcon={<Filter />}
+          sx={{ minWidth: 100 }} // 确保按钮宽度
+        >
           筛选
         </Button>
         {selectedLicenses.length > 1 && (
-          <Button variant="contained" startIcon={<GitCompare />} onClick={handleOpenComparison}>
+          <Button
+            variant="contained"
+            startIcon={<GitCompare />}
+            onClick={handleOpenComparison}
+            sx={{ minWidth: 100 }} // 确保按钮宽度
+          >
             比较
           </Button>
         )}
       </Box>
+
 
       <Grid container spacing={3}>
         {filteredLicenses.map((license) => (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableHead, TableRow, Paper, Typography } from '@mui/material';
+import { Table, TableBody, TableCell, TableHead, TableRow, Paper, Typography, LinearProgress, Tooltip } from '@mui/material';
 import { License } from '../types';
 
 interface LicenseComparisonProps {
@@ -20,26 +20,50 @@ const LicenseComparison: React.FC<LicenseComparisonProps> = ({ selectedLicenses 
     copyleft: 'Copyleft强度'
   };
 
+  const compatibilityColors = {
+    commercial: '#4caf50',
+    modification: '#2196f3',
+    distribution: '#ff9800',
+    private: '#9c27b0',
+    patent: '#f44336',
+    copyleft: '#795548'
+  };
+
   return (
     <Paper>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>特性</TableCell>
-            {selectedLicenses.map((license) => (
-              <TableCell key={license.keyword}>{license.name}</TableCell>
+            <TableCell>许可证</TableCell>
+            {Object.entries(compatibilityLabels).map(([key, label]) => (
+              <TableCell key={key}>{label}</TableCell>
             ))}
           </TableRow>
         </TableHead>
         <TableBody>
-          {Object.entries(compatibilityLabels).map(([key, label]) => (
-            <TableRow key={key}>
-              <TableCell>{label}</TableCell>
-              {selectedLicenses.map((license) => (
-                <TableCell key={`${license.keyword}-${key}`}>
-                  {license.compatibility[key as keyof typeof license.compatibility]}/5
-                </TableCell>
-              ))}
+          {selectedLicenses.map((license) => (
+            <TableRow key={license.keyword}>
+              <TableCell>{license.name}</TableCell>
+              {Object.entries(compatibilityLabels).map(([key]) => {
+                const value = license.compatibility[key as keyof typeof license.compatibility];
+                return (
+                  <TableCell key={`${license.keyword}-${key}`}>
+                    <Tooltip title={`${value}/5`} arrow>
+                      <LinearProgress
+                        variant="determinate"
+                        value={(value / 5) * 100}
+                        sx={{
+                          height: 10,
+                          backgroundColor: '#e0e0e0',
+                          '& .MuiLinearProgress-bar': {
+                            backgroundColor: compatibilityColors[key as keyof typeof compatibilityColors]
+                          }
+                        }}
+                      />
+                    </Tooltip>
+                  </TableCell>
+                );
+              })}
             </TableRow>
           ))}
         </TableBody>

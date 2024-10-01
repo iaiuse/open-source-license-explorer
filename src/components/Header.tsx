@@ -10,10 +10,10 @@ const Header: React.FC = () => {
           开源许可证探索器
         </Typography>
         <Link href="/" passHref>
-          <Button color="inherit" component="a">首页</Button>
+          <Button  component="a">首页</Button>
         </Link>
         <Link href="/About" passHref>
-          <Button color="inherit" component="a">关于</Button>
+          <Button component="a">关于</Button>
         </Link>
       </Toolbar>
     </AppBar>
