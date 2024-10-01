@@ -14,6 +14,7 @@ import {
   Divider
 } from '@mui/material';
 import Image from 'next/image';
+import ReactMarkdown from 'react-markdown';
 import { License } from '../types';
 
 const compatibilityLabels = {
@@ -63,9 +64,9 @@ const LicenseDetailDialog: React.FC<LicenseDetailDialogProps> = ({ license, open
         </Box>
       </DialogTitle>
       <DialogContent dividers>
-        <Typography variant="body2" paragraph>
+        <ReactMarkdown>
           {license.summary || license.spdx_description}
-        </Typography>
+        </ReactMarkdown>
         
         <Typography variant="subtitle1" gutterBottom>兼容性指标：</Typography>
         <Grid container spacing={1} sx={{ mb: 2 }}>
@@ -99,9 +100,11 @@ const LicenseDetailDialog: React.FC<LicenseDetailDialogProps> = ({ license, open
         <Divider sx={{ my: 2 }} />
         
         <Typography variant="subtitle1" gutterBottom>分析：</Typography>
-        <Typography variant="body2" paragraph sx={{ whiteSpace: 'pre-line' }}>
-          {license.tldrlegal_analysis}
-        </Typography>
+        <Box sx={{ '& > p': { marginBottom: 2 } }}>
+          <ReactMarkdown>
+            {license.tldrlegal_analysis}
+          </ReactMarkdown>
+        </Box>
         
         <Divider sx={{ my: 2 }} />
 
