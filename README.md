@@ -1,4 +1,3 @@
-以下是完整的 `README.md`，包含了 Python 组件安装说明、本地测试命令、如何创建 `.env.local` 文件、以及如何部署到 Vercel 的步骤。
 # 开源许可证探索器
 
 ## 项目介绍
@@ -159,7 +158,3 @@ pip install zhipuai github schedule beautifulsoup4 PyGithub python-dotenv
 ---
 
 项目仓库：[open-source-license-explorer](https://github.com/iaiuse/open-source-license-explorer)
-
----
-
-通过这个 `README.md`，用户将了解如何安装依赖、运行项目、生成许可证 JSON 数据以及如何部署到 Vercel。
