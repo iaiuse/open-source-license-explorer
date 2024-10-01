@@ -24,15 +24,6 @@ import LicenseDetailDialog from './LicenseDetailDialog';
 import { License } from '../types';
 import licensesData from '../data/licenses.json';
 
-const compatibilityLabels = {
-  commercial: '商业使用',
-  modification: '修改',
-  distribution: '分发',
-  private: '私有使用',
-  patent: '专利保护',
-  copyleft: 'Copyleft强度'
-};
-
 const compatibilityColors = {
   commercial: '#4caf50',
   modification: '#2196f3',
@@ -52,12 +43,12 @@ const LicenseExplorer: React.FC = () => {
   const [selectedLicense, setSelectedLicense] = useState<License | null>(null);
   type CompatibilityKey = 'commercial' | 'modification' | 'distribution' | 'private' | 'patent' | 'copyleft';
   const compatibilityLabels: Record<CompatibilityKey, string> = {
-    commercial: 'Commercial Use',
-    modification: 'Modification',
-    distribution: 'Distribution',
-    private: 'Private Use',
-    patent: 'Patent Use',
-    copyleft: 'Copyleft'
+    commercial: '商业使用',
+    modification: '修改',
+    distribution: '分发',
+    private: '私有使用',
+    patent: '专利保护',
+    copyleft: 'Copyleft强度'
   };
 
   useEffect(() => {
@@ -152,7 +143,7 @@ const LicenseExplorer: React.FC = () => {
                       <Grid item xs={6} key={key}>
                         <Tooltip title={`${compatibilityLabels[key as CompatibilityKey]}: ${value}/5`}>
                           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                            <Typography variant="body2" sx={{ minWidth: '80px', fontSize: '0.75rem' }}>
+                            <Typography variant="body2" sx={{ minWidth: '80px', fontSize: '0.75rem', color: compatibilityColors[key as CompatibilityKey] }}>
                               {compatibilityLabels[key as CompatibilityKey]}
                             </Typography>
                             <LinearProgress
