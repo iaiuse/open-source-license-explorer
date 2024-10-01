@@ -19,7 +19,6 @@ import {
 } from '@mui/material';
 import { Search, Filter, GitCompare, Info } from 'lucide-react';
 import LicenseComparison from './LicenseComparison';
-
 import LicenseDetailDialog from './LicenseDetailDialog';
 import { License } from '../types';
 import licensesData from '../data/licenses.json';
@@ -41,7 +40,9 @@ const LicenseExplorer: React.FC = () => {
   const [comparisonOpen, setComparisonOpen] = useState(false);
   const [detailOpen, setDetailOpen] = useState(false);
   const [selectedLicense, setSelectedLicense] = useState<License | null>(null);
+  
   type CompatibilityKey = 'commercial' | 'modification' | 'distribution' | 'private' | 'patent' | 'copyleft';
+  
   const compatibilityLabels: Record<CompatibilityKey, string> = {
     commercial: '商业使用',
     modification: '修改',
@@ -71,8 +72,6 @@ const LicenseExplorer: React.FC = () => {
     setComparisonOpen(false);
   };
 
-
-
   const handleOpenDetail = (license: License) => {
     setSelectedLicense(license);
     setDetailOpen(true);
@@ -80,6 +79,10 @@ const LicenseExplorer: React.FC = () => {
 
   const handleCloseDetail = () => {
     setDetailOpen(false);
+  };
+
+  const truncateSummary = (text: string, maxLength: number) => {
+    return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text;
   };
 
   const filteredLicenses = licenses.filter((license: License) =>
@@ -153,7 +156,7 @@ const LicenseExplorer: React.FC = () => {
               />
               <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant="body2" color="text.secondary" gutterBottom>
-                  {license.summary}
+                  {truncateSummary(license.summary, 120)}
                 </Typography>
                 <Box sx={{ mt: 2 }}>
                   <Grid container spacing={1}>
@@ -240,7 +243,6 @@ const LicenseExplorer: React.FC = () => {
           <Button onClick={handleCloseDetail}>关闭</Button>
         </DialogActions>
       </Dialog>
-
 
       <LicenseDetailDialog
         license={selectedLicense}
