@@ -61,7 +61,7 @@ const LicenseDetailDialog: React.FC<LicenseDetailDialogProps> = ({ license, open
           backgroundSize: 'auto', // 不拉伸，保持原始尺寸
           backgroundPosition: 'top left', // 放置在左上角
           backgroundRepeat: 'no-repeat',
-          opacity: 0.05, // 设置较低的透明度，以确保内容不会被遮盖
+          opacity: 0.5, // 设置较低的透明度，以确保内容不会被遮盖
           zIndex: 1 // 保证背景在底层
         }}
       >
