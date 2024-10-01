@@ -52,79 +52,83 @@ const LicenseDetailDialog: React.FC<LicenseDetailDialogProps> = ({ license, open
           {license.name}
         </Typography>
       </DialogTitle>
-      <DialogContent dividers>
-        
-        {/* 将徽标移到内容区域 */}
-        {license.logo && (
-          <Box
-            sx={{
-              width: '100%',
-              height: '200px',
-              background: `url(${license.logo}) no-repeat center/contain`,
-              backgroundSize: 'contain',
-              opacity: 0.1, // 设置透明度
-              marginBottom: 2,
-            }}
-          />
-        )}
-        
-        <ReactMarkdown>
-          {license.summary || license.spdx_description}
-        </ReactMarkdown>
-        
-        <Typography variant="subtitle1" gutterBottom>兼容性指标：</Typography>
-        <Grid container spacing={1} sx={{ mb: 2 }}>
-          {Object.entries(license.compatibility).map(([key, value]) => (
-            <Grid item xs={6} key={key}>
-              <Tooltip title={`${compatibilityLabels[key as keyof typeof compatibilityLabels]}: ${value}/5`}>
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <Typography variant="caption" sx={{ minWidth: '80px', fontSize: '0.75rem' }}>
-                    {compatibilityLabels[key as keyof typeof compatibilityLabels]}
-                  </Typography>
-                  <LinearProgress 
-                    variant="determinate" 
-                    value={value * 20} 
-                    sx={{ 
-                      flexGrow: 1, 
-                      ml: 1,
-                      height: 6,
-                      borderRadius: 3,
-                      '& .MuiLinearProgress-bar': {
-                        borderRadius: 3,
-                        backgroundColor: compatibilityColors[key as keyof typeof compatibilityColors]
-                      }
-                    }} 
-                  />
-                </Box>
-              </Tooltip>
-            </Grid>
-          ))}
-        </Grid>
-
-        <Divider sx={{ my: 2 }} />
-        
-        <Typography variant="subtitle1" gutterBottom>分析：</Typography>
-        <Box sx={{ '& > p': { marginBottom: 2 } }}>
+      <DialogContent 
+        dividers
+        sx={{
+          position: 'relative',
+          // 背景图像作为底色
+          backgroundImage: `url(${license.logo})`,
+          backgroundSize: 'contain', // 调整背景图的大小，可以根据需要选择 'cover' 或 'contain'
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.8, // 控制背景透明度，以减少干扰
+          zIndex: 1 // 保持背景在底层
+        }}
+      >
+        <Box
+          sx={{
+            position: 'relative',
+            zIndex: 2, // 确保内容在背景图之上显示
+          }}
+        >
           <ReactMarkdown>
-            {license.tldrlegal_analysis}
+            {license.summary || license.spdx_description}
           </ReactMarkdown>
-        </Box>
-        
-        <Divider sx={{ my: 2 }} />
+          
+          <Typography variant="subtitle1" gutterBottom>兼容性指标：</Typography>
+          <Grid container spacing={1} sx={{ mb: 2 }}>
+            {Object.entries(license.compatibility).map(([key, value]) => (
+              <Grid item xs={6} key={key}>
+                <Tooltip title={`${compatibilityLabels[key as keyof typeof compatibilityLabels]}: ${value}/5`}>
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Typography variant="caption" sx={{ minWidth: '80px', fontSize: '0.75rem' }}>
+                      {compatibilityLabels[key as keyof typeof compatibilityLabels]}
+                    </Typography>
+                    <LinearProgress 
+                      variant="determinate" 
+                      value={value * 20} 
+                      sx={{ 
+                        flexGrow: 1, 
+                        ml: 1,
+                        height: 6,
+                        borderRadius: 3,
+                        '& .MuiLinearProgress-bar': {
+                          borderRadius: 3,
+                          backgroundColor: compatibilityColors[key as keyof typeof compatibilityColors]
+                        }
+                      }} 
+                    />
+                  </Box>
+                </Tooltip>
+              </Grid>
+            ))}
+          </Grid>
 
-        <Typography variant="subtitle1" gutterBottom>热门项目：</Typography>
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-          {license.popular_projects.map((project) => (
-            <Chip 
-              key={project.name}
-              label={`${project.name} (${project.stars} stars)`}
-              component="a"
-              href={project.url}
-              target="_blank"
-              clickable
-              size="small"
-            />
-          ))}
+          <Divider sx={{ my: 2 }} />
+          
+          <Typography variant="subtitle1" gutterBottom>分析：</Typography>
+          <Box sx={{ '& > p': { marginBottom: 2 } }}>
+            <ReactMarkdown>
+              {license.tldrlegal_analysis}
+            </ReactMarkdown>
+          </Box>
+          
+          <Divider sx={{ my: 2 }} />
+
+          <Typography variant="subtitle1" gutterBottom>热门项目：</Typography>
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+            {license.popular_projects.map((project) => (
+              <Chip 
+                key={project.name}
+                label={`${project.name} (${project.stars} stars)`}
+                component="a"
+                href={project.url}
+                target="_blank"
+                clickable
+                size="small"
+              />
+            ))}
+          </Box>
         </Box>
       </DialogContent>
       <DialogActions>
