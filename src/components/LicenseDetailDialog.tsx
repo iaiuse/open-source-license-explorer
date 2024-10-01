@@ -14,7 +14,7 @@ import {
   Divider
 } from '@mui/material';
 import Image from 'next/image';
-import { License } from '../../types';
+import { License } from '../types';
 
 const compatibilityLabels = {
   commercial: '商业使用',

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Box, 
-  Card, 
-  CardContent, 
-  CardHeader, 
-  Typography, 
-  Button, 
+import {
+  Box,
+  Card,
+  CardContent,
+  CardHeader,
+  Typography,
+  Button,
   TextField,
   Chip,
   Grid,
@@ -17,11 +17,11 @@ import {
   DialogActions,
   Avatar
 } from '@mui/material';
-import { Search, Filter, Compare, Info } from 'lucide-react';
+import { Search, Filter, GitCompare, Info } from 'lucide-react';
 import LicenseComparison from './LicenseComparison';
 
 import LicenseDetailDialog from './LicenseDetailDialog';
-
+import { License } from '../types';
 import licensesData from '../data/licenses.json';
 
 const compatibilityLabels = {
@@ -43,22 +43,30 @@ const compatibilityColors = {
 };
 
 const LicenseExplorer: React.FC = () => {
-  const [licenses, setLicenses] = useState([]);
-  const [selectedLicenses, setSelectedLicenses] = useState([]);
+  const [licenses, setLicenses] = useState<License[]>([]);
+  const [selectedLicenses, setSelectedLicenses] = useState<License[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [filters, setFilters] = useState({});
+  const [filters, setFilters] = useState<Partial<Record<CompatibilityKey, number>>>({});
   const [comparisonOpen, setComparisonOpen] = useState(false);
   const [detailOpen, setDetailOpen] = useState(false);
-  const [selectedLicense, setSelectedLicense] = useState(null);
-  
+  const [selectedLicense, setSelectedLicense] = useState<License | null>(null);
+  type CompatibilityKey = 'commercial' | 'modification' | 'distribution' | 'private' | 'patent' | 'copyleft';
+  const compatibilityLabels: Record<CompatibilityKey, string> = {
+    commercial: 'Commercial Use',
+    modification: 'Modification',
+    distribution: 'Distribution',
+    private: 'Private Use',
+    patent: 'Patent Use',
+    copyleft: 'Copyleft'
+  };
 
   useEffect(() => {
     setLicenses(licensesData);
   }, []);
 
-  const handleLicenseToggle = (license) => {
-    setSelectedLicenses(prev => 
-      prev.includes(license) 
+  const handleLicenseToggle = (license: License) => {
+    setSelectedLicenses(prev =>
+      prev.includes(license)
         ? prev.filter(l => l !== license)
         : [...prev, license].slice(-3)
     );
@@ -72,9 +80,9 @@ const LicenseExplorer: React.FC = () => {
     setComparisonOpen(false);
   };
 
-  
 
-  const handleOpenDetail = (license) => {
+
+  const handleOpenDetail = (license: License) => {
     setSelectedLicense(license);
     setDetailOpen(true);
   };
@@ -83,10 +91,10 @@ const LicenseExplorer: React.FC = () => {
     setDetailOpen(false);
   };
 
-  const filteredLicenses = licenses.filter(license => 
+  const filteredLicenses = licenses.filter((license: License) =>
     license.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
-    Object.entries(filters).every(([key, value]) => 
-      license.compatibility[key] >= value
+    Object.entries(filters).every(([key, value]) =>
+      license.compatibility[key as CompatibilityKey] >= value
     )
   );
 
@@ -95,12 +103,12 @@ const LicenseExplorer: React.FC = () => {
       <Typography variant="h4" component="h1" gutterBottom sx={{ color: 'primary.main', textAlign: 'center' }}>
         开源许可证探索器
       </Typography>
-      
+
       <Box sx={{ display: 'flex', gap: 2, mb: 4 }}>
-        <TextField 
+        <TextField
           fullWidth
           variant="outlined"
-          placeholder="搜索许可证..." 
+          placeholder="搜索许可证..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           InputProps={{
@@ -111,7 +119,7 @@ const LicenseExplorer: React.FC = () => {
           筛选
         </Button>
         {selectedLicenses.length > 1 && (
-          <Button variant="contained" startIcon={<Compare />} onClick={handleOpenComparison}>
+          <Button variant="contained" startIcon={<GitCompare />} onClick={handleOpenComparison}>
             比较
           </Button>
         )}
@@ -140,24 +148,17 @@ const LicenseExplorer: React.FC = () => {
                 </Typography>
                 <Box sx={{ mt: 2 }}>
                   <Grid container spacing={1}>
-                    {Object.entries(license.compatibility).map(([key, value]) => (
+                    {Object.entries(license.compatibility as Record<CompatibilityKey, number>).map(([key, value]) => (
                       <Grid item xs={6} key={key}>
-                        <Tooltip title={`${compatibilityLabels[key]}: ${value}/5`}>
+                        <Tooltip title={`${compatibilityLabels[key as CompatibilityKey]}: ${value}/5`}>
                           <Box sx={{ display: 'flex', alignItems: 'center' }}>
                             <Typography variant="body2" sx={{ minWidth: '80px', fontSize: '0.75rem' }}>
-                              {compatibilityLabels[key]}
+                              {compatibilityLabels[key as CompatibilityKey]}
                             </Typography>
-                            <LinearProgress 
-                              variant="determinate" 
-                              value={value * 20} 
-                              sx={{ 
-                                flexGrow: 1, 
-                                ml: 1,
-                                height: 6,
-                                '& .MuiLinearProgress-bar': {
-                                  backgroundColor: compatibilityColors[key]
-                                }
-                              }} 
+                            <LinearProgress
+                              variant="determinate"
+                              value={value * 20}
+                              sx={{ flexGrow: 1, ml: 1, height: 8, borderRadius: 5 }}
                             />
                           </Box>
                         </Tooltip>
@@ -168,7 +169,7 @@ const LicenseExplorer: React.FC = () => {
                 <Box sx={{ mt: 2 }}>
                   <Typography variant="subtitle2">热门项目：</Typography>
                   {license.popular_projects.slice(0, 2).map((project) => (
-                    <Chip 
+                    <Chip
                       key={project.name}
                       label={project.name}
                       size="small"
@@ -178,14 +179,14 @@ const LicenseExplorer: React.FC = () => {
                 </Box>
               </CardContent>
               <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
-                <Button 
+                <Button
                   variant="outlined"
                   startIcon={<Info />}
                   onClick={() => handleOpenDetail(license)}
                 >
                   详情
                 </Button>
-                <Button 
+                <Button
                   variant={selectedLicenses.includes(license) ? "contained" : "outlined"}
                   onClick={() => handleLicenseToggle(license)}
                 >
@@ -214,15 +215,17 @@ const LicenseExplorer: React.FC = () => {
             {selectedLicense?.tldrlegal_analysis}
           </Typography>
           <Typography variant="subtitle1">完整许可证文本：</Typography>
-          <Button 
-            href={selectedLicense?.full_text_url} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            variant="contained"
-            color="primary"
-          >
-            查看完整许可证
-          </Button>
+          {selectedLicense?.full_text_url && (
+            <Button
+              href={selectedLicense.full_text_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="contained"
+              color="primary"
+            >
+              查看完整许可证
+            </Button>
+          )}
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseDetail}>关闭</Button>
@@ -230,7 +233,7 @@ const LicenseExplorer: React.FC = () => {
       </Dialog>
 
 
-      <LicenseDetailDialog 
+      <LicenseDetailDialog
         license={selectedLicense}
         open={detailOpen}
         onClose={handleCloseDetail}

@@ -3,7 +3,7 @@ export interface License {
   keyword: string;
   spdx_description: string;
   wikipedia_intro: string | null;
-  logo: string | null;
+  logo: string;
   history: string | null;
   compatibility: {
     commercial: number;
@@ -14,7 +14,11 @@ export interface License {
     copyleft: number;
   };
   tldrlegal_analysis: string;
-  popular_projects: Array<{ name: string; url: string; stars: number }>;
+  popular_projects: Array<{
+    name: string;
+    url: string;
+    stars: number;
+  }>;
   full_text_url: string;
   summary: string;
 }
