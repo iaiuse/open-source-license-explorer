@@ -69,7 +69,7 @@ const LicenseDetailDialog: React.FC<LicenseDetailDialogProps> = ({ license, open
           {/* 左侧图标和标题 */}
           <Box display="flex" alignItems="center">
             {license.logo && (
-              <Box sx={{ width: 60, height: 60, marginRight: 2 }}>
+              <Box sx={{ width: 100, height: 100, marginRight: 2 }}>
                 <img src={license.logo} alt={`${license.name} logo`} width="100%" height="100%" />
               </Box>
             )}
