@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { 
   Box, 
   Card, 
@@ -15,11 +14,13 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogActions
+  DialogActions,
+  Avatar
 } from '@mui/material';
-import { Search, Filter, GitCompare } from 'lucide-react';
-import { License } from '../types';
+import { Search, Filter, Compare, Info } from 'lucide-react';
 import LicenseComparison from './LicenseComparison';
+
+import LicenseDetailDialog from './LicenseDetailDialog';
 
 import licensesData from '../data/licenses.json';
 
@@ -42,17 +43,20 @@ const compatibilityColors = {
 };
 
 const LicenseExplorer: React.FC = () => {
-  const [licenses, setLicenses] = useState<License[]>([]);
-  const [selectedLicenses, setSelectedLicenses] = useState<License[]>([]);
+  const [licenses, setLicenses] = useState([]);
+  const [selectedLicenses, setSelectedLicenses] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [filters, setFilters] = useState<{[key: string]: number}>({});
+  const [filters, setFilters] = useState({});
   const [comparisonOpen, setComparisonOpen] = useState(false);
+  const [detailOpen, setDetailOpen] = useState(false);
+  const [selectedLicense, setSelectedLicense] = useState(null);
+  
 
   useEffect(() => {
     setLicenses(licensesData);
   }, []);
 
-  const handleLicenseToggle = (license: License) => {
+  const handleLicenseToggle = (license) => {
     setSelectedLicenses(prev => 
       prev.includes(license) 
         ? prev.filter(l => l !== license)
@@ -68,10 +72,21 @@ const LicenseExplorer: React.FC = () => {
     setComparisonOpen(false);
   };
 
+  
+
+  const handleOpenDetail = (license) => {
+    setSelectedLicense(license);
+    setDetailOpen(true);
+  };
+
+  const handleCloseDetail = () => {
+    setDetailOpen(false);
+  };
+
   const filteredLicenses = licenses.filter(license => 
     license.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
     Object.entries(filters).every(([key, value]) => 
-      license.compatibility[key as keyof typeof license.compatibility] >= value
+      license.compatibility[key] >= value
     )
   );
 
@@ -96,7 +111,7 @@ const LicenseExplorer: React.FC = () => {
           筛选
         </Button>
         {selectedLicenses.length > 1 && (
-          <Button variant="contained" startIcon={<GitCompare />} onClick={handleOpenComparison}>
+          <Button variant="contained" startIcon={<Compare />} onClick={handleOpenComparison}>
             比较
           </Button>
         )}
@@ -107,43 +122,52 @@ const LicenseExplorer: React.FC = () => {
           <Grid item xs={12} sm={6} md={4} key={license.keyword}>
             <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
               <CardHeader
-                title={
-                  <Link href={`/license/${license.keyword}`} passHref legacyBehavior>
-                    <Typography variant="h6" color="primary" sx={{ cursor: 'pointer' }}>
-                      {license.name}
-                    </Typography>
-                  </Link>
+                avatar={
+                  <Avatar src={license.logo} alt={`${license.name} logo`}>
+                    {license.name.charAt(0)}
+                  </Avatar>
                 }
+                title={
+                  <Typography variant="h6" color="primary">
+                    {license.name}
+                  </Typography>
+                }
+                subheader={license.keyword}
               />
               <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant="body2" color="text.secondary" gutterBottom>
-                  {license.spdx_description || license.summary}
+                  {license.summary}
                 </Typography>
                 <Box sx={{ mt: 2 }}>
-                  {Object.entries(license.compatibility).map(([key, value]) => (
-                    <Tooltip key={key} title={`${compatibilityLabels[key as keyof typeof compatibilityLabels]}: ${value}/5`}>
-                      <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                        <Typography variant="caption" sx={{ minWidth: '100px' }}>
-                          {compatibilityLabels[key as keyof typeof compatibilityLabels]}
-                        </Typography>
-                        <LinearProgress 
-                          variant="determinate" 
-                          value={value * 20} 
-                          sx={{ 
-                            flexGrow: 1, 
-                            ml: 1,
-                            '& .MuiLinearProgress-bar': {
-                              backgroundColor: compatibilityColors[key as keyof typeof compatibilityColors]
-                            }
-                          }} 
-                        />
-                      </Box>
-                    </Tooltip>
-                  ))}
+                  <Grid container spacing={1}>
+                    {Object.entries(license.compatibility).map(([key, value]) => (
+                      <Grid item xs={6} key={key}>
+                        <Tooltip title={`${compatibilityLabels[key]}: ${value}/5`}>
+                          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                            <Typography variant="body2" sx={{ minWidth: '80px', fontSize: '0.75rem' }}>
+                              {compatibilityLabels[key]}
+                            </Typography>
+                            <LinearProgress 
+                              variant="determinate" 
+                              value={value * 20} 
+                              sx={{ 
+                                flexGrow: 1, 
+                                ml: 1,
+                                height: 6,
+                                '& .MuiLinearProgress-bar': {
+                                  backgroundColor: compatibilityColors[key]
+                                }
+                              }} 
+                            />
+                          </Box>
+                        </Tooltip>
+                      </Grid>
+                    ))}
+                  </Grid>
                 </Box>
                 <Box sx={{ mt: 2 }}>
                   <Typography variant="subtitle2">热门项目：</Typography>
-                  {license.popular_projects.slice(0, 3).map((project) => (
+                  {license.popular_projects.slice(0, 2).map((project) => (
                     <Chip 
                       key={project.name}
                       label={project.name}
@@ -153,11 +177,17 @@ const LicenseExplorer: React.FC = () => {
                   ))}
                 </Box>
               </CardContent>
-              <Box sx={{ p: 2 }}>
+              <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
+                <Button 
+                  variant="outlined"
+                  startIcon={<Info />}
+                  onClick={() => handleOpenDetail(license)}
+                >
+                  详情
+                </Button>
                 <Button 
                   variant={selectedLicenses.includes(license) ? "contained" : "outlined"}
                   onClick={() => handleLicenseToggle(license)}
-                  fullWidth
                 >
                   {selectedLicenses.includes(license) ? '取消选择' : '选择比较'}
                 </Button>
@@ -176,6 +206,35 @@ const LicenseExplorer: React.FC = () => {
           <Button onClick={handleCloseComparison}>关闭比较</Button>
         </DialogActions>
       </Dialog>
+
+      <Dialog open={detailOpen} onClose={handleCloseDetail} maxWidth="md" fullWidth>
+        <DialogTitle>{selectedLicense?.name}</DialogTitle>
+        <DialogContent>
+          <Typography variant="body1" paragraph>
+            {selectedLicense?.tldrlegal_analysis}
+          </Typography>
+          <Typography variant="subtitle1">完整许可证文本：</Typography>
+          <Button 
+            href={selectedLicense?.full_text_url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            variant="contained"
+            color="primary"
+          >
+            查看完整许可证
+          </Button>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDetail}>关闭</Button>
+        </DialogActions>
+      </Dialog>
+
+
+      <LicenseDetailDialog 
+        license={selectedLicense}
+        open={detailOpen}
+        onClose={handleCloseDetail}
+      />
     </Box>
   );
 };

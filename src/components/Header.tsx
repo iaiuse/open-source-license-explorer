@@ -12,7 +12,7 @@ const Header: React.FC = () => {
         <Link href="/" passHref>
           <Button color="inherit" component="a">首页</Button>
         </Link>
-        <Link href="/about" passHref>
+        <Link href="/About" passHref>
           <Button color="inherit" component="a">关于</Button>
         </Link>
       </Toolbar>
